@@ -1,6 +1,6 @@
 {
-    "belt_color": "green",
-    "product": "tungsten_plate",
+    "belt_color": "yellow",
+    "product": "electronic_circuit",
     "verbose": "false",
     "consoleLogging": "false"
 }

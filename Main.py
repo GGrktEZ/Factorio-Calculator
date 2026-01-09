@@ -10,6 +10,7 @@ from logger_config import LoggerSetup
 from loader import DataLoader
 from calculator import RecipeCalculator
 from printer import PlanPrinter
+from file_output import FileOutput
 import settings
 
 
@@ -51,12 +52,15 @@ def run_cli_mode():
 
         PlanPrinter.print_header(belt_color, belt_speed)
         PlanPrinter.print_plan(plan, verbose)
-        
+
+        output_path = FileOutput.save_calculation(plan, belt_color, belt_speed, verbose)
+
         logger.info("Calculation completed successfully")
         logger.info("=" * 60)
 
+        print(f"\nCalculation saved to: {output_path}")
         if LoggerSetup.get_log_file():
-            print(f"\nLog file saved to: {LoggerSetup.get_log_file()}")
+                print(f"Log file saved to: {LoggerSetup.get_log_file()}")
 
     except FileNotFoundError as e:
         logger.exception(f"File not found: {e}")

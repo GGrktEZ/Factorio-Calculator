@@ -9,14 +9,14 @@ from typing import Optional
 try:
     # Load .env if present
     from dotenv import load_dotenv
-    _ROOT = Path(__file__).resolve().parent.parent
+    _ROOT = Path(__file__).resolve().parent
     load_dotenv(dotenv_path=_ROOT / ".env", override=False)
 except Exception:
     # dotenv is optional at import time; avoid hard failure
     pass
 
 # Project root
-ROOT_DIR: Path = Path(__file__).resolve().parent.parent
+ROOT_DIR: Path = Path(__file__).resolve().parent
 
 # Data files
 BASE_JSON: str = os.getenv("BASE_JSON", "base.json")

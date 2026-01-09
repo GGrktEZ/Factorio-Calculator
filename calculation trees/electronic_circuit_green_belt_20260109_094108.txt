@@ -1,0 +1,28 @@
+════════════════════════════════════════════════════════════════════════════════
+  FACTORIO PRODUCTION CALCULATOR
+════════════════════════════════════════════════════════════════════════════════
+
+Recipe:      Electronic Circuit
+Belt:        Green Belt (60 items/s)
+Generated:   2026-01-09 09:41:08
+Mode:        Compact
+
+════════════════════════════════════════════════════════════════════════════════
+
+└── [Product] Electronic Circuit
+    Machine: Assembling Machine x24.00
+    Target:  60.00 items/s
+    
+    Ingredients:
+       ├── [Crafted] Copper Cable (180.00/s)
+       │   ├── [Product] Copper Cable
+       │   │   Machine: Assembling Machine x36.00
+       │   │   Target:  180.00 items/s
+       │   │   
+       │   │   Ingredients:
+       │   │      └── [Raw] Copper Plate (90.00/s)
+       └── [Raw] Iron Plate (60.00/s)
+
+════════════════════════════════════════════════════════════════════════════════
+  End of calculation
+════════════════════════════════════════════════════════════════════════════════

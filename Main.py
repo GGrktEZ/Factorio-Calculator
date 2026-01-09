@@ -6,11 +6,11 @@ It loads configuration, calculates machine requirements, and displays results.
 Can run in CLI mode (legacy) or GUI wizard mode (default).
 """
 import sys
-from factorio_calc.logger_config import LoggerSetup
-from factorio_calc.loader import DataLoader
-from factorio_calc.calculator import RecipeCalculator
-from factorio_calc.printer import PlanPrinter
-from factorio_calc import settings
+from logger_config import LoggerSetup
+from loader import DataLoader
+from calculator import RecipeCalculator
+from printer import PlanPrinter
+import settings
 
 
 def run_cli_mode():
@@ -84,7 +84,7 @@ def run_wizard_mode():
     logger.info("=" * 60)
     
     try:
-        from factorio_calc.textual_wizard import TextualWizard
+        from textual_wizzard import TextualWizard
         app = TextualWizard()
         app.run()
         

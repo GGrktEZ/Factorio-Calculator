@@ -2652,3 +2652,223 @@ AttributeError: 'ResultsPanel' object has no attribute 'clear'
 2026-01-09 09:09:52 - FactorioCalculator - DEBUG - Belt color changed to: green
 2026-01-09 09:10:00 - FactorioCalculator - INFO - Wizard mode completed
 2026-01-09 09:10:00 - FactorioCalculator - INFO - ============================================================
+2026-01-09 09:36:35 - FactorioCalculator - INFO - Logger initialized successfully
+2026-01-09 09:36:35 - FactorioCalculator - DEBUG - Log file: .\factorio_calculator.log
+2026-01-09 09:36:35 - FactorioCalculator - INFO - ============================================================
+2026-01-09 09:36:35 - FactorioCalculator - INFO - Factorio Calculator starting (Wizard mode)
+2026-01-09 09:36:35 - FactorioCalculator - INFO - ============================================================
+2026-01-09 09:36:36 - FactorioCalculator - DEBUG - TextualWizard initialized
+2026-01-09 09:36:36 - FactorioCalculator - INFO - Loading wizard interface
+2026-01-09 09:36:36 - FactorioCalculator - DEBUG - DataLoader initialized with directory: C:\Users\Alex David\Documents\Ausbildung\GIBZ\2025 M122 e Python Projekt\Factorio Projekt\Factorio Calculator
+2026-01-09 09:36:36 - FactorioCalculator - INFO - Loading base game data
+2026-01-09 09:36:36 - FactorioCalculator - DEBUG - Loading JSON file: C:\Users\Alex David\Documents\Ausbildung\GIBZ\2025 M122 e Python Projekt\Factorio Projekt\Factorio Calculator\base.json
+2026-01-09 09:36:36 - FactorioCalculator - INFO - Successfully loaded base.json
+2026-01-09 09:36:36 - FactorioCalculator - INFO - Loaded 29 recipes, 3 machines, 6 modules
+2026-01-09 09:36:36 - FactorioCalculator - DEBUG - Populated tree with 29 recipes
+2026-01-09 09:36:36 - FactorioCalculator - INFO - Wizard interface loaded successfully
+2026-01-09 09:36:36 - FactorioCalculator - DEBUG - Belt color changed to: green
+2026-01-09 09:36:39 - FactorioCalculator - DEBUG - Recipe selected: engine_unit
+2026-01-09 09:36:40 - FactorioCalculator - INFO - Starting calculation for engine_unit
+2026-01-09 09:36:40 - FactorioCalculator - DEBUG - RecipeCalculator initialized
+2026-01-09 09:36:40 - FactorioCalculator - DEBUG - Calculating plan for recipe: engine_unit at rate: 60.00 items/s
+2026-01-09 09:36:40 - FactorioCalculator - DEBUG - Selecting best machine for category: crafting
+2026-01-09 09:36:40 - FactorioCalculator - DEBUG - Selected machine: assembling_machine (productivity: 0.0)
+2026-01-09 09:36:40 - FactorioCalculator - DEBUG -   Calculating plan for recipe: iron_gear_wheel at rate: 60.00 items/s
+2026-01-09 09:36:40 - FactorioCalculator - DEBUG - Selecting best machine for category: crafting
+2026-01-09 09:36:40 - FactorioCalculator - DEBUG - Selected machine: assembling_machine (productivity: 0.0)
+2026-01-09 09:36:40 - FactorioCalculator - INFO - Saving calculation to: C:\Users\Alex David\Documents\Ausbildung\GIBZ\2025 M122 e Python Projekt\Factorio Projekt\Factorio Calculator\calculation trees\engine_unit_green_belt_20260109_093640.txt
+2026-01-09 09:36:40 - FactorioCalculator - INFO - Calculation saved successfully to: engine_unit_green_belt_20260109_093640.txt
+2026-01-09 09:36:40 - FactorioCalculator - INFO - Calculation completed and saved to file
+2026-01-09 09:36:40 - FactorioCalculator - INFO - Wizard mode completed
+2026-01-09 09:36:40 - FactorioCalculator - INFO - ============================================================
+2026-01-09 09:40:35 - FactorioCalculator - INFO - Logger initialized successfully
+2026-01-09 09:40:35 - FactorioCalculator - DEBUG - Log file: .\factorio_calculator.log
+2026-01-09 09:40:35 - FactorioCalculator - INFO - ============================================================
+2026-01-09 09:40:35 - FactorioCalculator - INFO - Factorio Calculator starting (Wizard mode)
+2026-01-09 09:40:35 - FactorioCalculator - INFO - ============================================================
+2026-01-09 09:40:35 - FactorioCalculator - DEBUG - TextualWizard initialized
+2026-01-09 09:40:35 - FactorioCalculator - INFO - Loading wizard interface
+2026-01-09 09:40:35 - FactorioCalculator - DEBUG - DataLoader initialized with directory: C:\Users\Alex David\Documents\Ausbildung\GIBZ\2025 M122 e Python Projekt\Factorio Projekt\Factorio Calculator
+2026-01-09 09:40:35 - FactorioCalculator - INFO - Loading base game data
+2026-01-09 09:40:35 - FactorioCalculator - DEBUG - Loading JSON file: C:\Users\Alex David\Documents\Ausbildung\GIBZ\2025 M122 e Python Projekt\Factorio Projekt\Factorio Calculator\base.json
+2026-01-09 09:40:35 - FactorioCalculator - INFO - Successfully loaded base.json
+2026-01-09 09:40:35 - FactorioCalculator - INFO - Loaded 29 recipes, 3 machines, 6 modules
+2026-01-09 09:40:35 - FactorioCalculator - DEBUG - Populated tree with 29 recipes
+2026-01-09 09:40:35 - FactorioCalculator - INFO - Wizard interface loaded successfully
+2026-01-09 09:40:35 - FactorioCalculator - DEBUG - Belt color changed to: green
+2026-01-09 09:40:40 - FactorioCalculator - DEBUG - Recipe selected: rocket_fuel
+2026-01-09 09:40:42 - FactorioCalculator - DEBUG - Verbose output set to: True
+2026-01-09 09:40:44 - FactorioCalculator - DEBUG - Verbose output set to: False
+2026-01-09 09:40:44 - FactorioCalculator - DEBUG - Verbose output set to: True
+2026-01-09 09:40:44 - FactorioCalculator - DEBUG - Verbose output set to: False
+2026-01-09 09:40:45 - FactorioCalculator - INFO - Starting calculation for rocket_fuel
+2026-01-09 09:40:45 - FactorioCalculator - DEBUG - RecipeCalculator initialized
+2026-01-09 09:40:45 - FactorioCalculator - DEBUG - Calculating plan for recipe: rocket_fuel at rate: 60.00 items/s
+2026-01-09 09:40:45 - FactorioCalculator - DEBUG - Selecting best machine for category: crafting
+2026-01-09 09:40:45 - FactorioCalculator - DEBUG - Selected machine: assembling_machine (productivity: 0.0)
+2026-01-09 09:40:45 - FactorioCalculator - INFO - Saving calculation to: C:\Users\Alex David\Documents\Ausbildung\GIBZ\2025 M122 e Python Projekt\Factorio Projekt\Factorio Calculator\calculation trees\rocket_fuel_green_belt_20260109_094045.txt
+2026-01-09 09:40:45 - FactorioCalculator - INFO - Calculation saved successfully to: rocket_fuel_green_belt_20260109_094045.txt
+2026-01-09 09:40:45 - FactorioCalculator - INFO - Calculation completed and saved to file
+2026-01-09 09:40:45 - FactorioCalculator - INFO - Wizard mode completed
+2026-01-09 09:40:45 - FactorioCalculator - INFO - ============================================================
+2026-01-09 09:41:04 - FactorioCalculator - INFO - Logger initialized successfully
+2026-01-09 09:41:04 - FactorioCalculator - DEBUG - Log file: .\factorio_calculator.log
+2026-01-09 09:41:04 - FactorioCalculator - INFO - ============================================================
+2026-01-09 09:41:04 - FactorioCalculator - INFO - Factorio Calculator starting (Wizard mode)
+2026-01-09 09:41:04 - FactorioCalculator - INFO - ============================================================
+2026-01-09 09:41:05 - FactorioCalculator - DEBUG - TextualWizard initialized
+2026-01-09 09:41:05 - FactorioCalculator - INFO - Loading wizard interface
+2026-01-09 09:41:05 - FactorioCalculator - DEBUG - DataLoader initialized with directory: C:\Users\Alex David\Documents\Ausbildung\GIBZ\2025 M122 e Python Projekt\Factorio Projekt\Factorio Calculator
+2026-01-09 09:41:05 - FactorioCalculator - INFO - Loading base game data
+2026-01-09 09:41:05 - FactorioCalculator - DEBUG - Loading JSON file: C:\Users\Alex David\Documents\Ausbildung\GIBZ\2025 M122 e Python Projekt\Factorio Projekt\Factorio Calculator\base.json
+2026-01-09 09:41:05 - FactorioCalculator - INFO - Successfully loaded base.json
+2026-01-09 09:41:05 - FactorioCalculator - INFO - Loaded 29 recipes, 3 machines, 6 modules
+2026-01-09 09:41:05 - FactorioCalculator - DEBUG - Populated tree with 29 recipes
+2026-01-09 09:41:05 - FactorioCalculator - INFO - Wizard interface loaded successfully
+2026-01-09 09:41:05 - FactorioCalculator - DEBUG - Belt color changed to: green
+2026-01-09 09:41:07 - FactorioCalculator - DEBUG - Recipe selected: electronic_circuit
+2026-01-09 09:41:08 - FactorioCalculator - INFO - Starting calculation for electronic_circuit
+2026-01-09 09:41:08 - FactorioCalculator - DEBUG - RecipeCalculator initialized
+2026-01-09 09:41:08 - FactorioCalculator - DEBUG - Calculating plan for recipe: electronic_circuit at rate: 60.00 items/s
+2026-01-09 09:41:08 - FactorioCalculator - DEBUG - Selecting best machine for category: crafting
+2026-01-09 09:41:08 - FactorioCalculator - DEBUG - Selected machine: assembling_machine (productivity: 0.0)
+2026-01-09 09:41:08 - FactorioCalculator - DEBUG -   Calculating plan for recipe: copper_cable at rate: 180.00 items/s
+2026-01-09 09:41:08 - FactorioCalculator - DEBUG - Selecting best machine for category: crafting
+2026-01-09 09:41:08 - FactorioCalculator - DEBUG - Selected machine: assembling_machine (productivity: 0.0)
+2026-01-09 09:41:08 - FactorioCalculator - INFO - Saving calculation to: C:\Users\Alex David\Documents\Ausbildung\GIBZ\2025 M122 e Python Projekt\Factorio Projekt\Factorio Calculator\calculation trees\electronic_circuit_green_belt_20260109_094108.txt
+2026-01-09 09:41:08 - FactorioCalculator - INFO - Calculation saved successfully to: electronic_circuit_green_belt_20260109_094108.txt
+2026-01-09 09:41:08 - FactorioCalculator - INFO - Calculation completed and saved to file
+2026-01-09 09:41:08 - FactorioCalculator - INFO - Wizard mode completed
+2026-01-09 09:41:08 - FactorioCalculator - INFO - ============================================================
+2026-01-09 09:41:11 - FactorioCalculator - INFO - Logger initialized successfully
+2026-01-09 09:41:11 - FactorioCalculator - DEBUG - Log file: .\factorio_calculator.log
+2026-01-09 09:41:11 - FactorioCalculator - INFO - ============================================================
+2026-01-09 09:41:11 - FactorioCalculator - INFO - Factorio Calculator starting (Wizard mode)
+2026-01-09 09:41:11 - FactorioCalculator - INFO - ============================================================
+2026-01-09 09:41:11 - FactorioCalculator - DEBUG - TextualWizard initialized
+2026-01-09 09:41:11 - FactorioCalculator - INFO - Loading wizard interface
+2026-01-09 09:41:11 - FactorioCalculator - DEBUG - DataLoader initialized with directory: C:\Users\Alex David\Documents\Ausbildung\GIBZ\2025 M122 e Python Projekt\Factorio Projekt\Factorio Calculator
+2026-01-09 09:41:11 - FactorioCalculator - INFO - Loading base game data
+2026-01-09 09:41:11 - FactorioCalculator - DEBUG - Loading JSON file: C:\Users\Alex David\Documents\Ausbildung\GIBZ\2025 M122 e Python Projekt\Factorio Projekt\Factorio Calculator\base.json
+2026-01-09 09:41:11 - FactorioCalculator - INFO - Successfully loaded base.json
+2026-01-09 09:41:11 - FactorioCalculator - INFO - Loaded 29 recipes, 3 machines, 6 modules
+2026-01-09 09:41:11 - FactorioCalculator - DEBUG - Populated tree with 29 recipes
+2026-01-09 09:41:11 - FactorioCalculator - INFO - Wizard interface loaded successfully
+2026-01-09 09:41:11 - FactorioCalculator - DEBUG - Belt color changed to: green
+2026-01-09 09:41:13 - FactorioCalculator - DEBUG - Verbose output set to: True
+2026-01-09 09:41:14 - FactorioCalculator - DEBUG - Recipe selected: electronic_circuit
+2026-01-09 09:41:15 - FactorioCalculator - INFO - Starting calculation for electronic_circuit
+2026-01-09 09:41:15 - FactorioCalculator - DEBUG - RecipeCalculator initialized
+2026-01-09 09:41:15 - FactorioCalculator - DEBUG - Calculating plan for recipe: electronic_circuit at rate: 60.00 items/s
+2026-01-09 09:41:15 - FactorioCalculator - DEBUG - Selecting best machine for category: crafting
+2026-01-09 09:41:15 - FactorioCalculator - DEBUG - Selected machine: assembling_machine (productivity: 0.0)
+2026-01-09 09:41:15 - FactorioCalculator - DEBUG -   Calculating plan for recipe: copper_cable at rate: 180.00 items/s
+2026-01-09 09:41:15 - FactorioCalculator - DEBUG - Selecting best machine for category: crafting
+2026-01-09 09:41:15 - FactorioCalculator - DEBUG - Selected machine: assembling_machine (productivity: 0.0)
+2026-01-09 09:41:15 - FactorioCalculator - INFO - Saving calculation to: C:\Users\Alex David\Documents\Ausbildung\GIBZ\2025 M122 e Python Projekt\Factorio Projekt\Factorio Calculator\calculation trees\electronic_circuit_green_belt_20260109_094115.txt
+2026-01-09 09:41:15 - FactorioCalculator - INFO - Calculation saved successfully to: electronic_circuit_green_belt_20260109_094115.txt
+2026-01-09 09:41:15 - FactorioCalculator - INFO - Calculation completed and saved to file
+2026-01-09 09:41:15 - FactorioCalculator - INFO - Wizard mode completed
+2026-01-09 09:41:15 - FactorioCalculator - INFO - ============================================================
+2026-01-09 09:46:07 - FactorioCalculator - INFO - Logger initialized successfully
+2026-01-09 09:46:07 - FactorioCalculator - DEBUG - Log file: .\factorio_calculator.log
+2026-01-09 09:46:07 - FactorioCalculator - INFO - ============================================================
+2026-01-09 09:46:07 - FactorioCalculator - INFO - Factorio Calculator starting (Wizard mode)
+2026-01-09 09:46:07 - FactorioCalculator - INFO - ============================================================
+2026-01-09 09:46:07 - FactorioCalculator - DEBUG - TextualWizard initialized
+2026-01-09 09:46:08 - FactorioCalculator - INFO - Loading wizard interface
+2026-01-09 09:46:08 - FactorioCalculator - DEBUG - DataLoader initialized with directory: C:\Users\Alex David\Documents\Ausbildung\GIBZ\2025 M122 e Python Projekt\Factorio Projekt\Factorio Calculator
+2026-01-09 09:46:08 - FactorioCalculator - INFO - Loading base game data
+2026-01-09 09:46:08 - FactorioCalculator - DEBUG - Loading JSON file: C:\Users\Alex David\Documents\Ausbildung\GIBZ\2025 M122 e Python Projekt\Factorio Projekt\Factorio Calculator\base.json
+2026-01-09 09:46:08 - FactorioCalculator - INFO - Successfully loaded base.json
+2026-01-09 09:46:08 - FactorioCalculator - INFO - Loaded 29 recipes, 3 machines, 6 modules
+2026-01-09 09:46:08 - FactorioCalculator - DEBUG - Populated tree with 29 recipes
+2026-01-09 09:46:08 - FactorioCalculator - INFO - Wizard interface loaded successfully
+2026-01-09 09:46:08 - FactorioCalculator - DEBUG - Belt color changed to: green
+2026-01-09 09:46:11 - FactorioCalculator - DEBUG - Recipe selected: electronic_circuit
+2026-01-09 09:46:13 - FactorioCalculator - DEBUG - Verbose output set to: True
+2026-01-09 09:46:14 - FactorioCalculator - INFO - Starting calculation for electronic_circuit
+2026-01-09 09:46:14 - FactorioCalculator - DEBUG - RecipeCalculator initialized
+2026-01-09 09:46:14 - FactorioCalculator - DEBUG - Calculating plan for recipe: electronic_circuit at rate: 60.00 items/s
+2026-01-09 09:46:14 - FactorioCalculator - DEBUG - Selecting best machine for category: electromagnetics
+2026-01-09 09:46:14 - FactorioCalculator - DEBUG - Selected machine: electromagnetic_plant (productivity: 0.5)
+2026-01-09 09:46:14 - FactorioCalculator - DEBUG -   Calculating plan for recipe: copper_cable at rate: 180.00 items/s
+2026-01-09 09:46:14 - FactorioCalculator - DEBUG - Selecting best machine for category: crafting
+2026-01-09 09:46:14 - FactorioCalculator - DEBUG - Selected machine: assembling_machine (productivity: 0.0)
+2026-01-09 09:46:14 - FactorioCalculator - INFO - Saving calculation to: C:\Users\Alex David\Documents\Ausbildung\GIBZ\2025 M122 e Python Projekt\Factorio Projekt\Factorio Calculator\calculation trees\electronic_circuit_green_belt_20260109_094614.txt
+2026-01-09 09:46:14 - FactorioCalculator - INFO - Calculation saved successfully to: electronic_circuit_green_belt_20260109_094614.txt
+2026-01-09 09:46:14 - FactorioCalculator - INFO - Calculation completed and saved to file
+2026-01-09 09:46:15 - FactorioCalculator - INFO - Wizard mode completed
+2026-01-09 09:46:15 - FactorioCalculator - INFO - ============================================================
+2026-01-09 10:07:42 - FactorioCalculator - INFO - Logger initialized successfully
+2026-01-09 10:07:42 - FactorioCalculator - DEBUG - Log file: C:\Users\Alex David\Documents\Ausbildung\GIBZ\2025 M122 e Python Projekt\Factorio Projekt\Factorio Calculator\factorio_calculator.log
+2026-01-09 10:07:42 - FactorioCalculator - INFO - ============================================================
+2026-01-09 10:07:42 - FactorioCalculator - INFO - Factorio Calculator starting (Wizard mode)
+2026-01-09 10:07:42 - FactorioCalculator - INFO - ============================================================
+2026-01-09 10:07:42 - FactorioCalculator - DEBUG - TextualWizard initialized
+2026-01-09 10:07:42 - FactorioCalculator - INFO - Loading wizard interface
+2026-01-09 10:07:42 - FactorioCalculator - DEBUG - DataLoader initialized with directory: C:\Users\Alex David\Documents\Ausbildung\GIBZ\2025 M122 e Python Projekt\Factorio Projekt\Factorio Calculator
+2026-01-09 10:07:42 - FactorioCalculator - INFO - Loading base game data
+2026-01-09 10:07:42 - FactorioCalculator - DEBUG - Loading JSON file: C:\Users\Alex David\Documents\Ausbildung\GIBZ\2025 M122 e Python Projekt\Factorio Projekt\Factorio Calculator\base.json
+2026-01-09 10:07:43 - FactorioCalculator - INFO - Successfully loaded base.json
+2026-01-09 10:07:43 - FactorioCalculator - INFO - Loaded 29 recipes, 3 machines, 6 modules
+2026-01-09 10:07:43 - FactorioCalculator - DEBUG - Populated tree with 29 recipes
+2026-01-09 10:07:43 - FactorioCalculator - INFO - Wizard interface loaded successfully
+2026-01-09 10:07:43 - FactorioCalculator - DEBUG - Belt color changed to: green
+2026-01-09 10:07:46 - FactorioCalculator - DEBUG - Recipe selected: advanced_circuit
+2026-01-09 10:07:50 - FactorioCalculator - DEBUG - Recipe selected: advanced_circuit
+2026-01-09 10:07:52 - FactorioCalculator - INFO - Starting calculation for advanced_circuit
+2026-01-09 10:07:52 - FactorioCalculator - DEBUG - RecipeCalculator initialized
+2026-01-09 10:07:52 - FactorioCalculator - DEBUG - Calculating plan for recipe: advanced_circuit at rate: 60.00 items/s
+2026-01-09 10:07:52 - FactorioCalculator - DEBUG - Selecting best machine for category: electromagnetics
+2026-01-09 10:07:52 - FactorioCalculator - DEBUG - Selected machine: electromagnetic_plant (productivity: 0.5)
+2026-01-09 10:07:52 - FactorioCalculator - DEBUG -   Calculating plan for recipe: copper_cable at rate: 240.00 items/s
+2026-01-09 10:07:52 - FactorioCalculator - DEBUG - Selecting best machine for category: electromagnetics
+2026-01-09 10:07:52 - FactorioCalculator - DEBUG - Selected machine: electromagnetic_plant (productivity: 0.5)
+2026-01-09 10:07:52 - FactorioCalculator - DEBUG -   Calculating plan for recipe: electronic_circuit at rate: 120.00 items/s
+2026-01-09 10:07:52 - FactorioCalculator - DEBUG - Selecting best machine for category: electromagnetics
+2026-01-09 10:07:52 - FactorioCalculator - DEBUG - Selected machine: electromagnetic_plant (productivity: 0.5)
+2026-01-09 10:07:52 - FactorioCalculator - DEBUG -     Calculating plan for recipe: copper_cable at rate: 360.00 items/s
+2026-01-09 10:07:52 - FactorioCalculator - DEBUG - Selecting best machine for category: electromagnetics
+2026-01-09 10:07:52 - FactorioCalculator - DEBUG - Selected machine: electromagnetic_plant (productivity: 0.5)
+2026-01-09 10:07:52 - FactorioCalculator - INFO - Saving calculation to: C:\Users\Alex David\Documents\Ausbildung\GIBZ\2025 M122 e Python Projekt\Factorio Projekt\Factorio Calculator\calculation trees\advanced_circuit_green_belt_20260109_100752.txt
+2026-01-09 10:07:52 - FactorioCalculator - INFO - Calculation saved successfully to: advanced_circuit_green_belt_20260109_100752.txt
+2026-01-09 10:07:52 - FactorioCalculator - INFO - Calculation completed and saved to file
+2026-01-09 10:07:52 - FactorioCalculator - INFO - Wizard mode completed
+2026-01-09 10:07:52 - FactorioCalculator - INFO - ============================================================
+2026-01-09 10:08:37 - FactorioCalculator - INFO - Logger initialized successfully
+2026-01-09 10:08:37 - FactorioCalculator - DEBUG - Log file: C:\Users\Alex David\Documents\Ausbildung\GIBZ\2025 M122 e Python Projekt\Factorio Projekt\Factorio Calculator\factorio_calculator.log
+2026-01-09 10:08:37 - FactorioCalculator - INFO - ============================================================
+2026-01-09 10:08:37 - FactorioCalculator - INFO - Factorio Calculator starting (Wizard mode)
+2026-01-09 10:08:37 - FactorioCalculator - INFO - ============================================================
+2026-01-09 10:08:37 - FactorioCalculator - DEBUG - TextualWizard initialized
+2026-01-09 10:08:38 - FactorioCalculator - INFO - Loading wizard interface
+2026-01-09 10:08:38 - FactorioCalculator - DEBUG - DataLoader initialized with directory: C:\Users\Alex David\Documents\Ausbildung\GIBZ\2025 M122 e Python Projekt\Factorio Projekt\Factorio Calculator
+2026-01-09 10:08:38 - FactorioCalculator - INFO - Loading base game data
+2026-01-09 10:08:38 - FactorioCalculator - DEBUG - Loading JSON file: C:\Users\Alex David\Documents\Ausbildung\GIBZ\2025 M122 e Python Projekt\Factorio Projekt\Factorio Calculator\base.json
+2026-01-09 10:08:38 - FactorioCalculator - INFO - Successfully loaded base.json
+2026-01-09 10:08:38 - FactorioCalculator - INFO - Loaded 29 recipes, 3 machines, 6 modules
+2026-01-09 10:08:38 - FactorioCalculator - DEBUG - Populated tree with 29 recipes
+2026-01-09 10:08:38 - FactorioCalculator - INFO - Wizard interface loaded successfully
+2026-01-09 10:08:38 - FactorioCalculator - DEBUG - Belt color changed to: green
+2026-01-09 10:08:45 - FactorioCalculator - DEBUG - Recipe selected: advanced_circuit
+2026-01-09 10:08:46 - FactorioCalculator - DEBUG - Verbose output set to: True
+2026-01-09 10:08:47 - FactorioCalculator - INFO - Starting calculation for advanced_circuit
+2026-01-09 10:08:47 - FactorioCalculator - DEBUG - RecipeCalculator initialized
+2026-01-09 10:08:47 - FactorioCalculator - DEBUG - Calculating plan for recipe: advanced_circuit at rate: 60.00 items/s
+2026-01-09 10:08:47 - FactorioCalculator - DEBUG - Selecting best machine for category: electromagnetics
+2026-01-09 10:08:47 - FactorioCalculator - DEBUG - Selected machine: electromagnetic_plant (productivity: 0.5)
+2026-01-09 10:08:47 - FactorioCalculator - DEBUG -   Calculating plan for recipe: copper_cable at rate: 240.00 items/s
+2026-01-09 10:08:47 - FactorioCalculator - DEBUG - Selecting best machine for category: electromagnetics
+2026-01-09 10:08:47 - FactorioCalculator - DEBUG - Selected machine: electromagnetic_plant (productivity: 0.5)
+2026-01-09 10:08:47 - FactorioCalculator - DEBUG -   Calculating plan for recipe: electronic_circuit at rate: 120.00 items/s
+2026-01-09 10:08:47 - FactorioCalculator - DEBUG - Selecting best machine for category: electromagnetics
+2026-01-09 10:08:47 - FactorioCalculator - DEBUG - Selected machine: electromagnetic_plant (productivity: 0.5)
+2026-01-09 10:08:47 - FactorioCalculator - DEBUG -     Calculating plan for recipe: copper_cable at rate: 360.00 items/s
+2026-01-09 10:08:47 - FactorioCalculator - DEBUG - Selecting best machine for category: electromagnetics
+2026-01-09 10:08:47 - FactorioCalculator - DEBUG - Selected machine: electromagnetic_plant (productivity: 0.5)
+2026-01-09 10:08:47 - FactorioCalculator - INFO - Saving calculation to: C:\Users\Alex David\Documents\Ausbildung\GIBZ\2025 M122 e Python Projekt\Factorio Projekt\Factorio Calculator\calculation trees\advanced_circuit_green_belt_20260109_100847.txt
+2026-01-09 10:08:47 - FactorioCalculator - INFO - Calculation saved successfully to: advanced_circuit_green_belt_20260109_100847.txt
+2026-01-09 10:08:47 - FactorioCalculator - INFO - Calculation completed and saved to file
+2026-01-09 10:08:47 - FactorioCalculator - INFO - Wizard mode completed
+2026-01-09 10:08:47 - FactorioCalculator - INFO - ============================================================

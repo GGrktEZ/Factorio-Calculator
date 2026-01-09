@@ -1,0 +1,42 @@
+════════════════════════════════════════════════════════════════════════════════
+  FACTORIO PRODUCTION CALCULATOR
+════════════════════════════════════════════════════════════════════════════════
+
+Recipe:      Advanced Circuit
+Belt:        Green Belt (60 items/s)
+Generated:   2026-01-09 10:07:52
+Mode:        Compact
+
+════════════════════════════════════════════════════════════════════════════════
+
+└── [Product] Advanced Circuit
+    Machine: Electromagnetic Plant x120.00
+    Target:  60.00 items/s
+    
+    Ingredients:
+       ├── [Crafted] Copper Cable (240.00/s)
+       │   ├── [Product] Copper Cable
+       │   │   Machine: Electromagnetic Plant x20.00
+       │   │   Target:  240.00 items/s
+       │   │   
+       │   │   Ingredients:
+       │   │      └── [Raw] Copper Plate (120.00/s)
+       ├── [Crafted] Electronic Circuit (120.00/s)
+       │   ├── [Product] Electronic Circuit
+       │   │   Machine: Electromagnetic Plant x20.00
+       │   │   Target:  120.00 items/s
+       │   │   
+       │   │   Ingredients:
+       │   │      ├── [Crafted] Copper Cable (360.00/s)
+       │   │      │   ├── [Product] Copper Cable
+       │   │      │   │   Machine: Electromagnetic Plant x30.00
+       │   │      │   │   Target:  360.00 items/s
+       │   │      │   │   
+       │   │      │   │   Ingredients:
+       │   │      │   │      └── [Raw] Copper Plate (180.00/s)
+       │   │      └── [Raw] Iron Plate (120.00/s)
+       └── [Raw] Plastic Bar (120.00/s)
+
+════════════════════════════════════════════════════════════════════════════════
+  End of calculation
+════════════════════════════════════════════════════════════════════════════════

@@ -138,7 +138,7 @@
       "allow_productivity": true
     },
     "copper_cable": {
-      "preferred_machine": "crafting",
+      "preferred_machine": "electromagnetics",
       "category": ["Nauvis", "Intermediate Products"],
       "time": 0.5,
       "ingredients": [{ "name": "copper_plate", "amount": 1 }],
@@ -156,7 +156,7 @@
     },
 
     "electronic_circuit": {
-      "preferred_machine": "crafting",
+      "preferred_machine": "electromagnetics",
       "category": ["Nauvis", "Intermediate Products", "Circuits"],
       "time": 0.5,
       "ingredients": [
@@ -168,7 +168,7 @@
     },
 
     "advanced_circuit": {
-      "preferred_machine": "crafting",
+      "preferred_machine": "electromagnetics",
       "category": ["Nauvis", "Intermediate Products", "Circuits"],
       "time": 6,
       "ingredients": [
@@ -181,7 +181,7 @@
     },
 
     "processing_unit": {
-      "preferred_machine": "crafting",
+      "preferred_machine": "electromagnetics",
       "category": ["Nauvis", "Intermediate Products", "Circuits"],
       "time": 10,
       "ingredients": [

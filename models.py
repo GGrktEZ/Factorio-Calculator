@@ -2,6 +2,7 @@
 Data models for Factorio Calculator.
 Defines the structure for recipes, machines, modules, and belts.
 """
+from __future__ import annotations
 from dataclasses import dataclass
 from typing import List, Dict, Optional
 

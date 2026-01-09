@@ -83,32 +83,23 @@ Edit `Config.json` to set:
 
 ## Project Structure
 
-- `main.py` - Entry point for both wizard and CLI modes
-- `factorio_calc/` - Core application package
-   - `calculator.py` - Production chain calculation logic
-   - `file_output.py` - ASCII tree file generation
-   - `loader.py` - JSON data loading utilities (.env-configurable)
-   - `logger_config.py` - Central logging setup
-   - `models.py` - Data models for recipes, machines, and products
-   - `settings.py` - Environment-based settings loader (.env)
-   - `textual_wizard.py` - Interactive wizard interface
-   - `utils.py` - Shared utility functions
+- `Main.py` - Entry point for both wizard and CLI modes
+- `calculator.py` - Production chain calculation logic
+- `file_output.py` - ASCII tree file generation
+- `loader.py` - JSON data loading utilities (.env-configurable)
+- `logger_config.py` - Central logging setup
+- `models.py` - Data models for recipes, machines, and products
+- `settings.py` - Environment-based settings loader (.env)
+- `textual_wizzard.py` - Interactive wizard interface
+- `utils.py` - Shared utility functions
 - `base.json` - Game data (recipes, machines, belts)
 - `Config.json` - User configuration (CLI mode)
 - `calculation trees/` - Output folder for generated calculation files
 - `.env.example` / `.env` - Environment configuration
 - `requirements.txt` - Python dependencies
 - `documentation.md` - Development history and design decisions
+- `__pycache__/` - Python bytecode cache (auto-generated)
 
-## Code Quality Standards
-
-This project follows industry best practices:
-- **DRY Principle**: Shared code extracted to utility modules
-- **Separation of Concerns**: Clear module boundaries and responsibilities
-- **Type Hints**: Full type annotations for better code clarity
-- **Logging**: Comprehensive logging system with configurable output
-- **Error Handling**: Graceful error handling with informative messages
-- **Clean Code**: Minimal comments, self-documenting code structure
 
 ## Development History
 
@@ -167,6 +158,11 @@ Mode:        Verbose
   End of calculation
 ════════════════════════════════════════════════════════════════════════════════
 ```
+
+## Future Improvements
+- Sort recipes alphabetically in the wizard tree
+- Add custom belt speeds support
+- Add belt balancer and ammount calculations
 
 ## Development
 

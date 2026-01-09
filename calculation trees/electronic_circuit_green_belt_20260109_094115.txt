@@ -2,14 +2,14 @@
   FACTORIO PRODUCTION CALCULATOR
 ════════════════════════════════════════════════════════════════════════════════
 
-Recipe:      Military Science Pack
+Recipe:      Electronic Circuit
 Belt:        Green Belt (60 items/s)
-Generated:   2026-01-07 16:48:55
+Generated:   2026-01-09 09:41:15
 Mode:        Verbose
 
 ════════════════════════════════════════════════════════════════════════════════
 
-└── [Product] Military Science Pack
+└── [Product] Electronic Circuit
     ┌─ Machine Configuration
     │  Type:         Assembling Machine
     │  Speed:        1.25x
@@ -17,13 +17,25 @@ Mode:        Verbose
     │
     ├─ Production Details
     │  Target Rate:  60.00 items/s
-    │  Per Machine:  0.25 items/s
-    │  Machines:     240.00
+    │  Per Machine:  2.50 items/s
+    │  Machines:     24.00
     │
-    └─ Required Ingredients (3)
-       ├── [Raw] Grenade (30.00/s)
-       ├── [Raw] Piercing Rounds Magazine (30.00/s)
-       └── [Raw] Wall (60.00/s)
+    └─ Required Ingredients (2)
+       ├── [Crafted] Copper Cable (180.00/s)
+       │   ├── [Product] Copper Cable
+       │   │   ┌─ Machine Configuration
+       │   │   │  Type:         Assembling Machine
+       │   │   │  Speed:        1.25x
+       │   │   │  Productivity: 0%
+       │   │   │
+       │   │   ├─ Production Details
+       │   │   │  Target Rate:  180.00 items/s
+       │   │   │  Per Machine:  5.00 items/s
+       │   │   │  Machines:     36.00
+       │   │   │
+       │   │   └─ Required Ingredients (1)
+       │   │      └── [Raw] Copper Plate (90.00/s)
+       └── [Raw] Iron Plate (60.00/s)
 
 ════════════════════════════════════════════════════════════════════════════════
   End of calculation

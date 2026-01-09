@@ -48,7 +48,6 @@ python main.py
 4. **View Results**: The wizard closes and creates a formatted text file in the `calculation trees` folder
    - Contains a nicely formatted ASCII tree structure
    - Shows all machines, production rates, and ingredient dependencies
-   - Includes emojis for better readability (📦 products, ⚙️ machines, ⛏️ raw materials, 🔧 crafted items)
    - Verbose mode shows detailed machine configurations
    - Compact mode shows essential information only
 

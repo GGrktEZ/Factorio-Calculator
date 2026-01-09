@@ -39,7 +39,7 @@ I performed a comprehensive code review of the Factorio Calculator project, anal
 **Fix**:
 - Restructured as proper development history document
 - Added clear before/after examples of recipe category refactoring
-- Documented architectural decisions and their rationale
+- Documented architectural decisions and their rationale 
 
 ### 5. **Incomplete README**
 **Issue**: Missing project evolution history and code quality information.

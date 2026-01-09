@@ -1,0 +1,84 @@
+════════════════════════════════════════════════════════════════════════════════
+  FACTORIO PRODUCTION CALCULATOR
+════════════════════════════════════════════════════════════════════════════════
+
+Recipe:      Metallurgic Science Pack
+Belt:        Green Belt (60 items/s)
+Generated:   2026-01-09 08:46:21
+Mode:        Verbose
+
+════════════════════════════════════════════════════════════════════════════════
+
+└── [Product] Metallurgic Science Pack
+    ┌─ Machine Configuration
+    │  Type:         Foundry
+    │  Speed:        4.0x
+    │  Productivity: 50%
+    │
+    ├─ Production Details
+    │  Target Rate:  60.00 items/s
+    │  Per Machine:  0.60 items/s
+    │  Machines:     100.00
+    │
+    └─ Required Ingredients (3)
+       ├── [Crafted] Molten Copper (12000.00/s)
+       │   ├── [Product] Molten Copper
+       │   │   ┌─ Machine Configuration
+       │   │   │  Type:         Foundry
+       │   │   │  Speed:        4.0x
+       │   │   │  Productivity: 50%
+       │   │   │
+       │   │   ├─ Production Details
+       │   │   │  Target Rate:  12000.00 items/s
+       │   │   │  Per Machine:  3000.00 items/s
+       │   │   │  Machines:     4.00
+       │   │   │
+       │   │   └─ Required Ingredients (1)
+       │   │      └── [Raw] Copper Ore (1200.00/s)
+       ├── [Crafted] Tungsten Carbide (180.00/s)
+       │   ├── [Product] Tungsten Carbide
+       │   │   ┌─ Machine Configuration
+       │   │   │  Type:         Foundry
+       │   │   │  Speed:        4.0x
+       │   │   │  Productivity: 50%
+       │   │   │
+       │   │   ├─ Production Details
+       │   │   │  Target Rate:  180.00 items/s
+       │   │   │  Per Machine:  0.75 items/s
+       │   │   │  Machines:     240.00
+       │   │   │
+       │   │   └─ Required Ingredients (2)
+       │   │      ├── [Raw] Tungsten Ore (360.00/s)
+       │   │      └── [Raw] Carbon (180.00/s)
+       └── [Crafted] Tungsten Plate (120.00/s)
+           └── [Product] Tungsten Plate
+               ┌─ Machine Configuration
+               │  Type:         Foundry
+               │  Speed:        4.0x
+               │  Productivity: 50%
+               │
+               ├─ Production Details
+               │  Target Rate:  120.00 items/s
+               │  Per Machine:  0.50 items/s
+               │  Machines:     240.00
+               │
+               └─ Required Ingredients (1)
+                  └── [Crafted] Tungsten Carbide (120.00/s)
+                      └── [Product] Tungsten Carbide
+                          ┌─ Machine Configuration
+                          │  Type:         Foundry
+                          │  Speed:        4.0x
+                          │  Productivity: 50%
+                          │
+                          ├─ Production Details
+                          │  Target Rate:  120.00 items/s
+                          │  Per Machine:  0.75 items/s
+                          │  Machines:     160.00
+                          │
+                          └─ Required Ingredients (2)
+                             ├── [Raw] Tungsten Ore (240.00/s)
+                             └── [Raw] Carbon (120.00/s)
+
+════════════════════════════════════════════════════════════════════════════════
+  End of calculation
+════════════════════════════════════════════════════════════════════════════════

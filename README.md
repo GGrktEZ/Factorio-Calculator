@@ -71,22 +71,33 @@ This mode reads settings directly from `Config.json` and outputs results to the 
 
 ## Project Structure
 
-- `Main.py` - Entry point for both wizard and CLI modes
-- `calculator.py` - Production chain calculation logic
-- `file_output.py` - ASCII tree file generation
-- `loader.py` - JSON data loading utilities (.env-configurable)
-- `logger_config.py` - Central logging setup
-- `models.py` - Data models for recipes, machines, and products
-- `settings.py` - Environment-based settings loader (.env)
-- `textual_wizzard.py` - Interactive wizard interface
-- `utils.py` - Shared utility functions
-- `base.json` - Game data (recipes, machines, belts)
-- `Config.json` - User configuration (CLI mode)
-- `calculation trees/` - Output folder for generated calculation files
-- `.env.example` / `.env` - Environment configuration
+### Root Directory
+- `Main.py` - Entry point launcher (calls src/Main.py)
+- `README.md` - This file
+- `testing.md` - Test protocol and cases
 - `requirements.txt` - Python dependencies
 - `documentation.md` - Development history and design decisions
-- `__pycache__/` - Python bytecode cache (auto-generated)
+- `.env.example` / `.env` - Environment configuration
+- `factorio_calculator.log` - Application log file
+
+### src/ - Python Source Code
+- `Main.py` - Application entry point for both wizard and CLI modes
+- `calculator.py` - Production chain calculation logic
+- `file_output.py` - ASCII tree file generation
+- `loader.py` - JSON data loading utilities
+- `logger_config.py` - Central logging setup
+- `models.py` - Data models for recipes, machines, and products
+- `settings.py` - Environment-based settings loader
+- `textual_wizzard.py` - Interactive wizard interface
+- `utils.py` - Shared utility functions
+
+### data/ - Configuration and Game Data
+- `base.json` - Game data (recipes, machines, belts)
+- `Config.json` - User configuration (CLI mode)
+
+### calculation trees/ - Output Folder
+- Generated calculation files with timestamped names
+- Format: `{recipe}_{belt}_belt_{mode}_{timestamp}.txt`
 
 
 ## Development History

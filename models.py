@@ -97,14 +97,14 @@ class BeltSpeeds:
     blue: float
     green: float
 
-    def get_speed(self, color: str) -> float:
+    def get_speed(self, color: str) -> Optional[float]:
         speeds = {
             'yellow': self.yellow,
             'red': self.red,
             'blue': self.blue,
             'green': self.green
         }
-        return speeds.get(color, 0)
+        return speeds.get(color)
 
     @classmethod
     def from_dict(cls, data: Dict) -> 'BeltSpeeds':

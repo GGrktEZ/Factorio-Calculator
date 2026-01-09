@@ -11,6 +11,7 @@ from loader import DataLoader
 from calculator import RecipeCalculator
 from printer import PlanPrinter
 from file_output import FileOutput
+from models import MachinePlan
 import settings
 
 
@@ -44,23 +45,45 @@ def run_cli_mode():
         logger.info(f"Configuration: product={product}, belt_color={belt_color}, verbose={verbose}")
 
         belt_speed = game_data.belt_speeds.get_speed(belt_color)
-        logger.debug(f"Belt speed for {belt_color}: {belt_speed} items/s")
-        
-        logger.info(f"Starting calculation for {product}")
-        calculator = RecipeCalculator(game_data)
-        plan = calculator.calculate_machine_plan(product, belt_speed)
+
+        if belt_speed is None:
+            error_msg = f"Belt color '{belt_color}' not found!"
+            logger.warning(error_msg)
+            plan = MachinePlan(
+                recipe=product,
+                target_rate=0,
+                machine_type="",
+                machine_speed=0,
+                base_productivity=0,
+                time_per_craft=0,
+                product_amount=0,
+                output_per_machine=0,
+                machines_needed=0,
+                ingredients=[],
+                depth=0,
+                error=error_msg
+            )
+            belt_speed = 0
+        else:
+            logger.debug(f"Belt speed for {belt_color}: {belt_speed} items/s")
+            logger.info(f"Starting calculation for {product}")
+            calculator = RecipeCalculator(game_data)
+            plan = calculator.calculate_machine_plan(product, belt_speed)
 
         PlanPrinter.print_header(belt_color, belt_speed)
         PlanPrinter.print_plan(plan, verbose)
 
-        output_path = FileOutput.save_calculation(plan, belt_color, belt_speed, verbose)
+        if not plan.has_error:
+            output_path = FileOutput.save_calculation(plan, belt_color, belt_speed, verbose)
+            print(f"\nCalculation saved to: {output_path}")
+            logger.info("Calculation completed successfully")
+        else:
+            logger.warning(f"Calculation aborted: {plan.error}")
 
-        logger.info("Calculation completed successfully")
         logger.info("=" * 60)
 
-        print(f"\nCalculation saved to: {output_path}")
         if LoggerSetup.get_log_file():
-                print(f"Log file saved to: {LoggerSetup.get_log_file()}")
+            print(f"Log file saved to: {LoggerSetup.get_log_file()}")
 
     except FileNotFoundError as e:
         logger.exception(f"File not found: {e}")

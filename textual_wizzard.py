@@ -98,6 +98,22 @@ class TextualWizard(App):
         margin-top: 1;
     }
     
+    #error-message {
+        width: 100%;
+        height: auto;
+        background: red;
+        color: white;
+        content-align: center middle;
+        text-style: bold;
+        padding: 1;
+        margin-bottom: 1;
+        display: none;
+    }
+    
+    #error-message.visible {
+        display: block;
+    }
+    
     RecipeTree {
         height: 100%;
     }
@@ -121,6 +137,7 @@ class TextualWizard(App):
         
         with Container(id="main-container"):
             yield Static("Factorio Production Calculator", id="title")
+            yield Static("", id="error-message")
             
             with Horizontal(id="content"):
                 # Left side: Recipe tree
@@ -232,11 +249,15 @@ class TextualWizard(App):
     
     def action_calculate(self) -> None:
         if not self.selected_recipe:
-            self.query_one("#status", Static).update(
-                "ERROR: Please select a recipe first!"
-            )
+            error_widget = self.query_one("#error-message", Static)
+            error_widget.update("⚠ ERROR: Please select a recipe first!")
+            error_widget.add_class("visible")
             logger.warning("Calculate attempted without recipe selection")
             return
+        
+        # Clear any previous errors
+        error_widget = self.query_one("#error-message", Static)
+        error_widget.remove_class("visible")
         
         logger.info(f"Starting calculation for {self.selected_recipe}")
         self.query_one("#status", Static).update("Calculating...")
@@ -244,8 +265,21 @@ class TextualWizard(App):
         try:
             belt_speed = self.game_data.belt_speeds.get_speed(self.selected_belt)
 
+            if belt_speed is None:
+                error_msg = f"Belt color '{self.selected_belt}' not found!"
+                logger.warning(error_msg)
+                error_widget.update(f"⚠ ERROR: {error_msg}")
+                error_widget.add_class("visible")
+                return
+
             calculator = RecipeCalculator(self.game_data)
             plan = calculator.calculate_machine_plan(self.selected_recipe, belt_speed)
+
+            if plan.has_error:
+                logger.warning(f"Calculation aborted: {plan.error}")
+                error_widget.update(f"⚠ ERROR: {plan.error}")
+                error_widget.add_class("visible")
+                return
 
             output_path = FileOutput.save_calculation(
                 plan, 
@@ -273,4 +307,5 @@ class TextualWizard(App):
             
         except Exception as e:
             logger.exception(f"Calculation error: {e}")
-            self.query_one("#status", Static).update(f"ERROR: {e}")
+            error_widget.update(f"⚠ ERROR: {e}")
+            error_widget.add_class("visible")

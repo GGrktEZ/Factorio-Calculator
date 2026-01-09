@@ -23,15 +23,16 @@ class FileOutput:
         return output_path
 
     @classmethod
-    def generate_filename(cls, recipe_name: str, belt_color: str) -> str:
+    def generate_filename(cls, recipe_name: str, belt_color: str, verbose: bool = True) -> str:
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         safe_name = recipe_name.replace(' ', '_').replace('/', '_')
-        return f"{safe_name}_{belt_color}_belt_{timestamp}.txt"
+        mode = "verbose" if verbose else "compact"
+        return f"{safe_name}_{belt_color}_belt_{mode}_{timestamp}.txt"
 
     @classmethod
     def save_calculation(cls, plan: MachinePlan, belt_color: str, belt_speed: float, verbose: bool = True) -> str:
         output_folder = cls.ensure_output_folder()
-        filename = cls.generate_filename(plan.recipe, belt_color)
+        filename = cls.generate_filename(plan.recipe, belt_color, verbose)
         filepath = os.path.join(output_folder, filename)
 
         logger.info(f"Saving calculation to: {filepath}")

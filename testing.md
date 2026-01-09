@@ -14,7 +14,7 @@
 ```json
 {
    "belt_color": "green",
-   "product": "transport_belt",
+   "product": "electronic_circuit",
    "verbose": "true",
    "consoleLogging": "false"
 }
@@ -29,9 +29,9 @@
 **Fail if:**
 - Exceptions, missing output file, or log written elsewhere.
 
+---
 
-
-### 2 CLI - Different Belt (Yellow, Compact)
+### 2) CLI - Different Belt (Yellow, Compact)
 **Config.json:**
 ```json
 {
@@ -46,11 +46,13 @@
 2. Check belt speed prints 15/s; output file name includes `yellow_belt`.
 3. Compare machine count is higher than green-belt runs.
 **Pass if:**
-- Belt speed 15/s; compact output (no machine speed/productivity lines); file saved with yellow_belt in name.
+- Belt speed 15/s; compact output (no machine speed/productivity lines); Machine ammount changed to fit new belt speed; file saved with yellow_belt in name.
 **Fail if:**
 - Verbose info appears, speed not 15/s, or file not created.
 
-### 3 CLI - Invalid Recipe Error Path
+---
+
+### 3) CLI - Invalid Recipe Error Path
 **Config.json:**
 ```json
 {
@@ -65,53 +67,85 @@
 2. Observe console error message.
 3. Check log for the same error text.
 **Pass if:**
-- Message "Recipe 'nonexistent_recipe_xyz' not found!" shown; program exits gracefully; log entry recorded.
+- Message "Recipe 'nonexistent_recipe_xyz' not found!" shown; no calculation tree file created; program exits gracefully; log entry recorded.
 **Fail if:**
 - Unhandled exception, crash, or no error message.
 
-### 4 CLI - Corrupted Config Handling
+---
+
+### 3.5) CLI - Invalid Belt Error Path
+**Config.json:**
+```json
+{
+   "belt_color": "pink",
+   "product": "electric_engine_unit",
+   "verbose": "true",
+   "consoleLogging": "false"
+}
+```
+**Steps:**
+1. `python .\Main.py --cli`
+2. Observe console error message.
+3. Check log for the same error text.
+**Pass if:**
+- Message "Belt color 'pink' not found!" shown; no calculation tree file created; program exits gracefully; log entry recorded.
+**Fail if:**
+- Unhandled exception, crash, or no error message.
+
+---
+
+### 4) CLI - Corrupted Config Handling
 **Config.json:** make it invalid JSON (e.g., remove final `}`).
 **Steps:**
 1. `python .\Main.py --cli`
 2. Observe error about invalid JSON.
 3. Restore Config.json after test.
 **Pass if:**
-- Clear JSON error shown; no crash loop; log records JSON error.
+- Clear JSON error shown in log file; no crash loop.
 **Fail if:**
 - Silent failure or misleading message.
 
-### 5 Wizard - Launch and Calculate
+---
+
+### 5) Wizard - Launch and Calculate
 **Steps:**
 1. `python .\Main.py`
 2. In UI, expand a category and select a recipe (e.g., Iron Gear Wheel).
-3. Click Calculate.
-4. Verify output file appears in `calculation trees/` with selected belt (default green).
+3. Select a belt color (default green).
+4. Leave Verbose unchecked; click Calculate.
+5. Click Calculate.
+6. Verify output file appears in `calculation trees/` with selected belt (default green).
 **Pass if:**
-- UI loads; selection works; calculation completes; file saved; no errors.
+- UI loads; selection works; calculation completes; file saved; no errors or logical mistakes.
 **Fail if:**
 - UI fails to load, calculate button does nothing, or no file is created.
 
-### 6 Wizard - Verbose Toggle
+---
+
+### 6) Wizard - Verbose Toggle
 **Steps:**
 1. Run wizard.
 2. Select a recipe; ensure "Verbose Output" is checked; Calculate.
 3. Re-run wizard, uncheck "Verbose Output"; same recipe; Calculate.
 4. Compare the two files (verbose has machine speed/productivity; compact does not).
 **Pass if:**
-- Toggle changes detail level; both files valid and saved.
+- Toggle changes detail level; both files valid, correctly named and saved.
 **Fail if:**
 - Toggle has no effect or files missing.
 
-### 7 Wizard - No Recipe Selected Error
+---
+
+### 7) Wizard - No Recipe Selected Error
 **Steps:**
 1. Run wizard.
 2. Do not select a recipe; click Calculate.
 **Pass if:**
-- Error message shown: "ERROR: Please select a recipe first!"; app stays running.
+- Error message shown: "ERROR: Please select a recipe first!"; Logger shows correct WARNING; app stays running.
 **Fail if:**
-- Crash or no error feedback.
+- Crash or no error feedback. 
+---
 
-### 8 Output & Logging Verification
+### 8) Output & Logging Verification
 **Prereq:** Run any successful CLI or wizard test first.
 **Steps:**
 1. Check latest file in `calculation trees/` for header, recipe, belt, timestamp, ASCII tree, footer "End of calculation".

@@ -1,0 +1,72 @@
+════════════════════════════════════════════════════════════════════════════════
+  FACTORIO PRODUCTION CALCULATOR
+════════════════════════════════════════════════════════════════════════════════
+
+Recipe:      Flying Robot Frame
+Belt:        Green Belt (60 items/s)
+Generated:   2026-01-09 12:08:44
+Mode:        Compact
+
+════════════════════════════════════════════════════════════════════════════════
+
+└── [Product] Flying Robot Frame
+    Machine: Assembling Machine x960.00
+    Target:  60.00 items/s
+    
+    Ingredients:
+       ├── [Raw] Battery (120.00/s)
+       ├── [Crafted] Electric Engine Unit (60.00/s)
+       │   ├── [Product] Electric Engine Unit
+       │   │   Machine: Assembling Machine x480.00
+       │   │   Target:  60.00 items/s
+       │   │   
+       │   │   Ingredients:
+       │   │      ├── [Crafted] Electronic Circuit (120.00/s)
+       │   │      │   ├── [Product] Electronic Circuit
+       │   │      │   │   Machine: Electromagnetic Plant x20.00
+       │   │      │   │   Target:  120.00 items/s
+       │   │      │   │   
+       │   │      │   │   Ingredients:
+       │   │      │   │      ├── [Crafted] Copper Cable (360.00/s)
+       │   │      │   │      │   ├── [Product] Copper Cable
+       │   │      │   │      │   │   Machine: Electromagnetic Plant x30.00
+       │   │      │   │      │   │   Target:  360.00 items/s
+       │   │      │   │      │   │   
+       │   │      │   │      │   │   Ingredients:
+       │   │      │   │      │   │      └── [Raw] Copper Plate (180.00/s)
+       │   │      │   │      └── [Raw] Iron Plate (120.00/s)
+       │   │      ├── [Crafted] Engine Unit (60.00/s)
+       │   │      │   ├── [Product] Engine Unit
+       │   │      │   │   Machine: Assembling Machine x480.00
+       │   │      │   │   Target:  60.00 items/s
+       │   │      │   │   
+       │   │      │   │   Ingredients:
+       │   │      │   │      ├── [Raw] Steel Plate (60.00/s)
+       │   │      │   │      ├── [Crafted] Iron Gear Wheel (60.00/s)
+       │   │      │   │      │   ├── [Product] Iron Gear Wheel
+       │   │      │   │      │   │   Machine: Assembling Machine x24.00
+       │   │      │   │      │   │   Target:  60.00 items/s
+       │   │      │   │      │   │   
+       │   │      │   │      │   │   Ingredients:
+       │   │      │   │      │   │      └── [Raw] Iron Plate (120.00/s)
+       │   │      │   │      └── [Raw] Pipe (120.00/s)
+       │   │      └── [Raw] Lubricant (900.00/s)
+       ├── [Crafted] Electronic Circuit (180.00/s)
+       │   ├── [Product] Electronic Circuit
+       │   │   Machine: Electromagnetic Plant x30.00
+       │   │   Target:  180.00 items/s
+       │   │   
+       │   │   Ingredients:
+       │   │      ├── [Crafted] Copper Cable (540.00/s)
+       │   │      │   ├── [Product] Copper Cable
+       │   │      │   │   Machine: Electromagnetic Plant x45.00
+       │   │      │   │   Target:  540.00 items/s
+       │   │      │   │   
+       │   │      │   │   Ingredients:
+       │   │      │   │      └── [Raw] Copper Plate (270.00/s)
+       │   │      └── [Raw] Iron Plate (180.00/s)
+       └── [Raw] Steel Plate (60.00/s)
+
+════════════════════════════════════════════════════════════════════════════════
+  End of calculation
+════════════════════════════════════════════════════════════════════════════════

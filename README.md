@@ -67,20 +67,7 @@ Run the program using configuration from Config.json:
 python main.py --cli
 ```
 
-This mode reads settings from `Config.json` and outputs results to the console.
-
-## Configuration (CLI Mode Only)
-
-Edit `Config.json` to set:
-
-```json
-{
-    "belt_color": "green",
-    "product": "transport_belt",
-    "verbose": true,
-    "consoleLogging": false
-}
-```
+This mode reads settings directly from `Config.json` and outputs results to the console.
 
 ## Project Structure
 
@@ -126,6 +113,7 @@ Edit `Config.json` to set:
 - added .env, requirements and settings.py for configuration
 - pydocstring improvements and code cleanup
 - logging improvements
+- add multiple test scenarios for valuation
 
 ## Example Output
 
@@ -181,11 +169,8 @@ Mode:        Compact
 - Sort recipes alphabetically in the wizard tree
 - Add custom belt speeds support
 - Add belt balancer and ammount calculations
+- auto deleting of old calculation trees based on age or count
 
 ## Development
 
 This project was developed as part of Module M122 Python Project at GIBZ.
-
-## License
-
-Educational project - no license specified.

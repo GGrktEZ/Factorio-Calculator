@@ -1,0 +1,1 @@
+"""Factorio Calculator core package."""

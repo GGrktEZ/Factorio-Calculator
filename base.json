@@ -1,0 +1,372 @@
+{
+  "belt_speeds": {
+    "yellow": 15,
+    "red": 30,
+    "blue": 45,
+    "green": 60
+  },
+
+  "modules": {
+    "speed_1": {
+      "speed": 0.2,
+      "productivity": 0
+    },
+    "speed_2": {
+      "speed": 0.3,
+      "productivity": 0
+    },
+    "speed_3": {
+      "speed": 0.5,
+      "productivity": 0
+    },
+    "prod_1": {
+      "speed": -0.15,
+      "productivity": 0.04
+    },
+    "prod_2": {
+      "speed": -0.15,
+      "productivity": 0.06
+    },
+    "prod_3": {
+      "speed": -0.15,
+      "productivity": 0.1
+    }
+  },
+
+  "machines": {
+    "assembling_machine": {
+      "crafting_speed": 1.25,
+      "module_slots": 4,
+      "categories": ["crafting"],
+      "base_productivity": 0.0
+    },
+    "electromagnetic_plant": {
+      "crafting_speed": 2.0,
+      "module_slots": 5,
+      "categories": ["electromagnetics"],
+      "base_productivity": 0.5
+    },
+    "foundry": {
+      "crafting_speed": 4.0,
+      "module_slots": 4,
+      "categories": ["founding", "smelting"],
+      "base_productivity": 0.5
+    }
+  },
+
+  "recipes": {
+    "automation_science_pack": {
+      "preferred_machine": "crafting",
+      "category": ["Science Packs"],
+      "time": 5,
+      "ingredients": [
+        { "name": "copper_plate", "amount": 1 },
+        { "name": "iron_gear_wheel", "amount": 1 }
+      ],
+      "products": [{ "name": "automation_science_pack", "amount": 1 }],
+      "allow_productivity": true
+    },
+    "logistic_science_pack": {
+      "preferred_machine": "crafting",
+      "category": ["Science Packs"],
+      "time": 6,
+      "ingredients": [
+        { "name": "inserter", "amount": 1 },
+        { "name": "transport_belt", "amount": 1 }
+      ],
+      "products": [{ "name": "logistic_science_pack", "amount": 1 }],
+      "allow_productivity": true
+    },
+    "military_science_pack": {
+      "preferred_machine": "crafting",
+      "category": ["Science Packs"],
+      "time": 10,
+      "ingredients": [
+        { "name": "grenade", "amount": 1 },
+        { "name": "piercing_rounds_magazine", "amount": 1 },
+        { "name": "wall", "amount": 2 }
+      ],
+      "products": [{ "name": "military_science_pack", "amount": 2 }],
+      "allow_productivity": true
+    },
+    "chemical_science_pack": {
+      "preferred_machine": "crafting",
+      "category": ["Science Packs"],
+      "time": 24,
+      "ingredients": [
+        { "name": "advanced_circuit", "amount": 3 },
+        { "name": "engine_unit", "amount": 2 },
+        { "name": "sulfur", "amount": 1 }
+      ],
+      "products": [{ "name": "chemical_science_pack", "amount": 2 }],
+      "allow_productivity": true
+    },
+    "production_science_pack": {
+      "preferred_machine": "crafting",
+      "category": ["Science Packs"],
+      "time": 21,
+      "ingredients": [
+        { "name": "electric_furnace", "amount": 1 },
+        { "name": "productivity_module", "amount": 1 },
+        { "name": "rail", "amount": 30 }
+      ],
+      "products": [{ "name": "production_science_pack", "amount": 3 }],
+      "allow_productivity": true
+    },
+    "utility_science_pack": {
+      "preferred_machine": "crafting",
+      "category": ["Science Packs"],
+      "time": 21,
+      "ingredients": [
+        { "name": "flying_robot_frame", "amount": 1 },
+        { "name": "low_density_structure", "amount": 3 },
+        { "name": "processing_unit", "amount": 2 }
+      ],
+      "products": [{ "name": "utility_science_pack", "amount": 3 }],
+      "allow_productivity": true
+    },
+    "metallurgic_science_pack": {
+      "preferred_machine": "founding",
+      "category": ["Science Packs"],
+      "time": 10,
+      "ingredients": [
+        { "name": "molten_copper", "amount": 200 },
+        { "name": "tungsten_carbide", "amount": 3 },
+        { "name": "tungsten_plate", "amount": 2 }
+      ],
+      "products": [{ "name": "utility_science_pack", "amount": 1 }],
+      "allow_productivity": true
+    },
+    "copper_cable": {
+      "preferred_machine": "crafting",
+      "category": ["Nauvis", "Intermediate Products"],
+      "time": 0.5,
+      "ingredients": [{ "name": "copper_plate", "amount": 1 }],
+      "products": [{ "name": "copper_cable", "amount": 2 }],
+      "allow_productivity": true
+    },
+
+    "iron_gear_wheel": {
+      "preferred_machine": "crafting",
+      "category": ["Nauvis", "Intermediate Products"],
+      "time": 0.5,
+      "ingredients": [{ "name": "iron_plate", "amount": 2 }],
+      "products": [{ "name": "iron_gear_wheel", "amount": 1 }],
+      "allow_productivity": true
+    },
+
+    "electronic_circuit": {
+      "preferred_machine": "crafting",
+      "category": ["Nauvis", "Intermediate Products", "Circuits"],
+      "time": 0.5,
+      "ingredients": [
+        { "name": "copper_cable", "amount": 3 },
+        { "name": "iron_plate", "amount": 1 }
+      ],
+      "products": [{ "name": "electronic_circuit", "amount": 1 }],
+      "allow_productivity": true
+    },
+
+    "advanced_circuit": {
+      "preferred_machine": "crafting",
+      "category": ["Nauvis", "Intermediate Products", "Circuits"],
+      "time": 6,
+      "ingredients": [
+        { "name": "copper_cable", "amount": 4 },
+        { "name": "electronic_circuit", "amount": 2 },
+        { "name": "plastic_bar", "amount": 2 }
+      ],
+      "products": [{ "name": "advanced_circuit", "amount": 1 }],
+      "allow_productivity": true
+    },
+
+    "processing_unit": {
+      "preferred_machine": "crafting",
+      "category": ["Nauvis", "Intermediate Products", "Circuits"],
+      "time": 10,
+      "ingredients": [
+        { "name": "advanced_circuit", "amount": 2 },
+        { "name": "electronic_circuit", "amount": 20 },
+        { "name": "sulfuric_acid", "amount": 5 }
+      ],
+      "products": [{ "name": "processing_unit", "amount": 1 }],
+      "allow_productivity": true
+    },
+
+    "engine_unit": {
+      "preferred_machine": "crafting",
+      "category": ["Nauvis", "Intermediate Products", "Engines"],
+      "time": 10,
+      "ingredients": [
+        { "name": "steel_plate", "amount": 1 },
+        { "name": "iron_gear_wheel", "amount": 1 },
+        { "name": "pipe", "amount": 2 }
+      ],
+      "products": [{ "name": "engine_unit", "amount": 1 }],
+      "allow_productivity": true
+    },
+
+    "electric_engine_unit": {
+      "preferred_machine": "crafting",
+      "category": ["Nauvis", "Intermediate Products", "Engines"],
+      "time": 10,
+      "ingredients": [
+        { "name": "electronic_circuit", "amount": 2 },
+        { "name": "engine_unit", "amount": 1 },
+        { "name": "lubricant", "amount": 15 }
+      ],
+      "products": [{ "name": "electric_engine_unit", "amount": 1 }],
+      "allow_productivity": true
+    },
+
+    "flying_robot_frame": {
+      "preferred_machine": "crafting",
+      "category": ["Nauvis", "Intermediate Products", "Robotics"],
+      "time": 20,
+      "ingredients": [
+        { "name": "battery", "amount": 2 },
+        { "name": "electric_engine_unit", "amount": 1 },
+        { "name": "electronic_circuit", "amount": 3 },
+        { "name": "steel_plate", "amount": 1 }
+      ],
+      "products": [{ "name": "flying_robot_frame", "amount": 1 }],
+      "allow_productivity": true
+    },
+
+    "rocket_fuel": {
+      "preferred_machine": "crafting",
+      "category": ["Nauvis", "Intermediate Products", "Rocketry"],
+      "time": 15,
+      "ingredients": [
+        { "name": "solid_fuel", "amount": 10 },
+        { "name": "light_oil", "amount": 10 }
+      ],
+      "products": [{ "name": "rocket_fuel", "amount": 1 }],
+      "allow_productivity": true
+    },
+    "ammoniacal_solution_separation": {
+      "preferred_machine": "crafting",
+      "category": ["Aquilo", "Intermediate products"],
+      "time": 1,
+      "ingredients": [{ "name": "ammoniacal_solution", "amount": 50 }],
+      "products": [
+        { "name": "ammonia", "amount": 50 },
+        { "name": "ice", "amount": 5 }
+      ],
+      "allow_productivity": true
+    },
+    "ice_melting": {
+      "preferred_machine": "crafting",
+      "category": ["Aquilo", "Intermediate products"],
+      "time": 1,
+      "ingredients": [{ "name": "ice", "amount": 1 }],
+      "products": [{ "name": "water", "amount": 20 }],
+      "allow_productivity": true
+    },
+    "lithium": {
+      "preferred_machine": "crafting",
+      "category": ["Aquilo", "Intermediate products"],
+      "time": 20,
+      "ingredients": [
+        { "name": "ammonia", "amount": 50 },
+        { "name": "holmium_plate", "amount": 1 },
+        { "name": "lithium_brine", "amount": 50 }
+      ],
+      "products": [{ "name": "lithium", "amount": 5 }],
+      "allow_productivity": true
+    },
+    "lithium_plate": {
+      "preferred_machine": "smelting",
+      "category": ["Aquilo", "Intermediate products"],
+      "time": 6.4,
+      "ingredients": [{ "name": "lithium", "amount": 1 }],
+      "products": [{ "name": "lithium_plate", "amount": 1 }],
+      "allow_productivity": true
+    },
+    "ice_platform": {
+      "preferred_machine": "crafting",
+      "category": ["Aquilo", "Logistics"],
+      "time": 30,
+      "ingredients": [
+        { "name": "ammonia", "amount": 400 },
+        { "name": "ice", "amount": 50 }
+      ],
+      "products": [{ "name": "ice_platform", "amount": 1 }],
+      "allow_productivity": false
+    },
+    "molten_iron": {
+      "preferred_machine": "founding",
+      "category": ["Vulcanus", "Intermediate products", "Molten metals"],
+      "time": 1,
+      "ingredients": [{ "name": "iron_ore", "amount": 50 }],
+      "products": [{ "name": "molten_iron", "amount": 500 }],
+      "allow_productivity": true
+    },
+
+    "molten_copper": {
+      "preferred_machine": "founding",
+      "category": ["Vulcanus", "Intermediate products", "Molten metals"],
+      "time": 1,
+      "ingredients": [{ "name": "copper_ore", "amount": 50 }],
+      "products": [{ "name": "molten_copper", "amount": 500 }],
+      "allow_productivity": true
+    },
+
+    "iron_plate_casting": {
+      "preferred_machine": "founding",
+      "category": ["Vulcanus", "Intermediate products", "Casting"],
+      "time": 1,
+      "ingredients": [{ "name": "molten_iron", "amount": 100 }],
+      "products": [{ "name": "iron_plate", "amount": 5 }],
+      "allow_productivity": true
+    },
+
+    "copper_plate_casting": {
+      "preferred_machine": "founding",
+      "category": ["Vulcanus", "Intermediate products", "Casting"],
+      "time": 1,
+      "ingredients": [{ "name": "molten_copper", "amount": 100 }],
+      "products": [{ "name": "copper_plate", "amount": 5 }],
+      "allow_productivity": true
+    },
+
+    "tungsten_carbide": {
+      "preferred_machine": "founding",
+      "category": ["Vulcanus", "Intermediate products"],
+      "time": 8,
+      "ingredients": [
+        { "name": "tungsten_ore", "amount": 2 },
+        { "name": "carbon", "amount": 1 }
+      ],
+      "products": [{ "name": "tungsten_carbide", "amount": 1 }],
+      "allow_productivity": true
+    },
+
+    "tungsten_plate": {
+      "preferred_machine": "founding",
+      "category": ["Vulcanus", "Intermediate products"],
+      "time": 12,
+      "ingredients": [{ "name": "tungsten_carbide", "amount": 1 }],
+      "products": [{ "name": "tungsten_plate", "amount": 1 }],
+      "allow_productivity": true
+    },
+
+    "calcite_processing": {
+      "preferred_machine": "crafting",
+      "category": ["Vulcanus", "Intermediate products"],
+      "time": 4,
+      "ingredients": [{ "name": "calcite", "amount": 5 }],
+      "products": [{ "name": "lime", "amount": 5 }],
+      "allow_productivity": true
+    },
+
+    "lava_cooling": {
+      "preferred_machine": "crafting",
+      "category": ["Vulcanus", "Intermediate products"],
+      "time": 2,
+      "ingredients": [{ "name": "lava", "amount": 100 }],
+      "products": [{ "name": "stone", "amount": 10 }],
+      "allow_productivity": false
+    }
+  }
+}

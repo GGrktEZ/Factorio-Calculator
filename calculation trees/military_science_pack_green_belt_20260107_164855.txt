@@ -1,0 +1,30 @@
+════════════════════════════════════════════════════════════════════════════════
+  FACTORIO PRODUCTION CALCULATOR
+════════════════════════════════════════════════════════════════════════════════
+
+Recipe:      Military Science Pack
+Belt:        Green Belt (60 items/s)
+Generated:   2026-01-07 16:48:55
+Mode:        Verbose
+
+════════════════════════════════════════════════════════════════════════════════
+
+└── [Product] Military Science Pack
+    ┌─ Machine Configuration
+    │  Type:         Assembling Machine
+    │  Speed:        1.25x
+    │  Productivity: 0%
+    │
+    ├─ Production Details
+    │  Target Rate:  60.00 items/s
+    │  Per Machine:  0.25 items/s
+    │  Machines:     240.00
+    │
+    └─ Required Ingredients (3)
+       ├── [Raw] Grenade (30.00/s)
+       ├── [Raw] Piercing Rounds Magazine (30.00/s)
+       └── [Raw] Wall (60.00/s)
+
+════════════════════════════════════════════════════════════════════════════════
+  End of calculation
+════════════════════════════════════════════════════════════════════════════════

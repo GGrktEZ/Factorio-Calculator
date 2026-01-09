@@ -14,12 +14,13 @@ An interactive tool for calculating production chains in Factorio.
 
 ## Installation
 
-1. Ensure Python 3.10+ is installed
-2. Install dependencies:
+1. Ensure Python 3.10+ is installe
+2. Pull or download the repository
+3. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
-3. Optional: create a .env (copy from .env.example) to override defaults
+4. Optional: create a .env (copy from .env.example) to override defaults
 
 ## Usage
 
@@ -103,11 +104,10 @@ Edit `Config.json` to set:
 
 ## Development History
 
-### Version 2.0 - Interactive Wizard Interface
-- Added Textual-based TUI wizard for interactive recipe selection
-- Implemented tree-based recipe browser with category hierarchies
-- Made wizard mode the default, CLI mode available via `--cli` flag
-- Added file output for calculation trees
+### Version 1.0 - CLI Calculator
+- Basic command-line calculator using `Config.json`
+- Machine selection and production rate calculations
+- Console output with tree-structured production plans
 
 ### Version 1.5 - Recipe Category Refactoring
 - Separated machine selection (`preferred_machine`) from UI categorization (`category`)
@@ -115,14 +115,21 @@ Edit `Config.json` to set:
 - Maintained backward compatibility for legacy data structures
 - See [documentation.md](documentation.md) for detailed migration notes
 
-### Version 1.0 - CLI Calculator
-- Basic command-line calculator using `Config.json`
-- Machine selection and production rate calculations
-- Console output with tree-structured production plans
+### Version 2.0 - Interactive Wizard Interface
+- Added Textual-based TUI wizard for interactive recipe selection
+- Implemented tree-based recipe browser with category hierarchies
+- Made wizard mode the default, CLI mode available via `--cli` flag
+- Added file output for calculation trees
+
+### Version 2.1 - File structure & code quality improvements
+- better seperation of logic into packages and modules
+- added .env, requirements and settings.py for configuration
+- pydocstring improvements and code cleanup
+- logging improvements
 
 ## Example Output
 
-When you calculate "Electronic Circuit" with a Green Belt (60 items/s) in verbose mode,
+When you calculate "Electronic Circuit" with a Green Belt (60 items/s) in non verbose mode,
 a file is created in the `calculation trees` folder:
 
 ```
@@ -130,29 +137,40 @@ a file is created in the `calculation trees` folder:
   FACTORIO PRODUCTION CALCULATOR
 ════════════════════════════════════════════════════════════════════════════════
 
-Recipe:      Electronic Circuit
+Recipe:      Advanced Circuit
 Belt:        Green Belt (60 items/s)
-Generated:   2026-01-06 10:12:34
-Mode:        Verbose
+Generated:   2026-01-09 10:07:52
+Mode:        Compact
 
 ════════════════════════════════════════════════════════════════════════════════
 
-└──  Electronic Circuit
-    ┌─ Machine Configuration
-    │  Type:         Assembling Machine
-    │  Speed:        1.25x
-    │  Productivity: 0%
-    │
-    ├─ Production Details
-    │  Target Rate:  60.00 items/s
-    │  Per Machine:  2.50 items/s
-    │  Machines:     24.00
-    │
-    └─ Required Ingredients (2)
-       ├──  Copper Cable (180.00/s) [Crafted]
-       │   └──  Copper Cable
-       │       (... nested tree continues ...)
-       └──   Iron Plate (60.00/s) [Raw]
+└── [Product] Advanced Circuit
+    Machine: Electromagnetic Plant x120.00
+    Target:  60.00 items/s
+    
+    Ingredients:
+       ├── [Crafted] Copper Cable (240.00/s)
+       │   ├── [Product] Copper Cable
+       │   │   Machine: Electromagnetic Plant x20.00
+       │   │   Target:  240.00 items/s
+       │   │   
+       │   │   Ingredients:
+       │   │      └── [Raw] Copper Plate (120.00/s)
+       ├── [Crafted] Electronic Circuit (120.00/s)
+       │   ├── [Product] Electronic Circuit
+       │   │   Machine: Electromagnetic Plant x20.00
+       │   │   Target:  120.00 items/s
+       │   │   
+       │   │   Ingredients:
+       │   │      ├── [Crafted] Copper Cable (360.00/s)
+       │   │      │   ├── [Product] Copper Cable
+       │   │      │   │   Machine: Electromagnetic Plant x30.00
+       │   │      │   │   Target:  360.00 items/s
+       │   │      │   │   
+       │   │      │   │   Ingredients:
+       │   │      │   │      └── [Raw] Copper Plate (180.00/s)
+       │   │      └── [Raw] Iron Plate (120.00/s)
+       └── [Raw] Plastic Bar (120.00/s)
 
 ════════════════════════════════════════════════════════════════════════════════
   End of calculation

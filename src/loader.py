@@ -22,12 +22,16 @@ class DataLoader:
         logger.debug(f"DataLoader initialized with directory: {directory}")
 
     def load_file(self, filename: str) -> Dict[str, Any]:
-        file_path = os.path.join(self.directory, filename)
+        # If filename is an absolute path, use it directly; otherwise join with directory
+        if os.path.isabs(filename):
+            file_path = filename
+        else:
+            file_path = os.path.join(self.directory, filename)
         logger.debug(f"Loading JSON file: {file_path}")
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
-            logger.info(f"Successfully loaded {filename}")
+            logger.info(f"Successfully loaded {os.path.basename(filename)}")
             return data
         except FileNotFoundError:
             logger.error(f"File not found: {file_path}")

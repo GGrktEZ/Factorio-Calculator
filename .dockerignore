@@ -1,0 +1,43 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Output files
+calculation trees/*.txt
+*.log
+
+# Git
+.git/
+.gitignore
+
+# Documentation
+documentation.md
+testing.md
+
+# OS files
+desktop.ini
+.DS_Store
+Thumbs.db
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# Env files (may contain secrets)
+.env

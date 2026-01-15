@@ -14,7 +14,24 @@ An interactive tool for calculating production chains in Factorio.
 
 ## Installation
 
-1. Ensure Python 3.10+ is installe
+### Option 1: Using Docker (Recommended)
+
+1. Ensure Docker is installed on your system
+2. Pull or download the repository
+3. Build and run with Docker Compose:
+   ```bash
+   docker-compose up --build
+   ```
+
+**Docker Benefits:**
+- No Python installation required
+- Consistent environment across all systems
+- Automatic dependency management
+- Output files saved to your local `calculation trees` folder
+
+### Option 2: Local Python Installation
+
+1. Ensure Python 3.10+ is installed
 2. Pull or download the repository
 3. Install dependencies:
    ```bash
@@ -26,8 +43,12 @@ An interactive tool for calculating production chains in Factorio.
 
 ### Wizard Mode (Interactive - Default)
 
-Run the program with the interactive wizard:
+**With Docker:**
+```bash
+docker-compose run --rm factorio-calculator
+```
 
+**Local Python:**
 ```bash
 python main.py
 ```
@@ -63,11 +84,49 @@ python main.py
 
 Run the program using configuration from Config.json:
 
+**With Docker:**
+```bash
+docker-compose run --rm factorio-calculator python Main.py --cli
+```
+
+**Local Python:**
 ```bash
 python main.py --cli
 ```
 
 This mode reads settings directly from `Config.json` and outputs results to the console.
+
+## Docker Commands
+
+### Build the Docker image
+```bash
+docker-compose build
+```
+
+### Run in interactive wizard mode
+```bash
+docker-compose run --rm factorio-calculator
+```
+
+### Run in CLI mode
+```bash
+docker-compose run --rm factorio-calculator python Main.py --cli
+```
+
+### Run with custom configuration
+```bash
+# Edit data/Config.json first, then:
+docker-compose run --rm factorio-calculator python Main.py --cli
+```
+
+### View output files
+Output files are automatically saved to the `calculation trees` folder on your host machine.
+
+### Clean up Docker resources
+```bash
+docker-compose down
+docker rmi factorio-calculator:latest
+```
 
 ## Project Structure
 

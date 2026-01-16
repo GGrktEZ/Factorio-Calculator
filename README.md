@@ -4,37 +4,37 @@ An interactive tool for calculating production chains in Factorio.
 
 ## Features
 
-- **Interactive Wizard Interface**: Browse recipes organized by planet and category
-- **Production Chain Calculation**: Automatically calculates required machines and ingredient rates
-- **Multi-level Tree View**: Shows complete production chains with nested ingredient requirements
-- **Belt Speed Options**: Calculate for Yellow, Red, Blue, or Green belts
-- **File Output**: Saves calculation trees to nicely formatted text files with ASCII art
-- **Verbose & Compact Modes**: Choose between detailed or simplified output
-- **Clean Logging**: Logs show important decisions without cluttering with calculation details
+- **Interactive Wizard Interface**: Browse recipes organized by planet and category.
+- **Production Chain Calculation**: Automatically calculates required machines and ingredient rates.
+- **Multi-level Tree View**: Displays complete production chains with nested ingredient requirements.
+- **Belt Speed Options**: Calculate for Yellow, Red, Blue, or Green belts.
+- **File Output**: Saves calculation trees to neatly formatted text files with ASCII art.
+- **Verbose & Compact Modes**: Choose between detailed or simplified output.
+- **Clean Logging**: Logs highlight important decisions without cluttering calculation details.
 
 ## Installation
 
 1. **Ensure Python 3.8+ is installed**
-   - Download from [python.org](https://www.python.org/) if needed
+   - Download from [python.org](https://www.python.org/) if needed.
    - Verify installation: `python --version`
 
-2. **Clone or download the repository**
+2. **Clone or download the repository.**
 
 3. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
    This installs:
-   - `textual` - Interactive terminal UI framework
-   - `python-dotenv` - Environment configuration support
+   - `textual` – Interactive terminal UI framework
+   - `python-dotenv` – Environment configuration support
 
 4. **Optional: Configure environment**
-   - Copy `.env.example` to `.env` to customize file paths or settings
-   - Default settings work out of the box
+   - Copy `.env.example` to `.env` to customize file paths or settings.
+   - Default settings work out of the box.
 
 ## Usage
 
-### Wizard Mode (Interactive - Default)
+### Wizard Mode (Interactive – Default)
 
 ```bash
 python main.py
@@ -42,30 +42,27 @@ python main.py
 
 **How to use the wizard:**
 
-1. **Select a Recipe**: Navigate the tree on the left using arrow keys or mouse
-   - Expand categories by clicking the arrows or pressing Space/Enter
-   - Click on a recipe name to select it
-   
+1. **Select a Recipe**: Navigate the tree on the left using arrow keys or mouse.
+   - Expand categories by clicking the arrows or pressing Space/Enter.
+   - Click on a recipe name to select it.
 2. **Choose Belt Color**: Use the dropdown to select:
    - Yellow Belt (15 items/s)
    - Red Belt (30 items/s)
    - Blue Belt (45 items/s)
    - Green Belt (60 items/s)
-
-3. **Calculate**: Press `Enter` or click the "Calculate" button
-
-4. **View Results**: The wizard closes and creates a formatted text file in the `calculation trees` folder
-   - Contains a nicely formatted ASCII tree structure
-   - Shows all machines, production rates, and ingredient dependencies
-   - Verbose mode shows detailed machine configurations
-   - Compact mode shows essential information only
+3. **Calculate**: Press `Enter` or click the "Calculate" button.
+4. **View Results**: The wizard closes and creates a formatted text file in the `calculation trees` folder.
+   - Contains a neatly formatted ASCII tree structure.
+   - Shows all machines, production rates, and ingredient dependencies.
+   - Verbose mode shows detailed machine configurations.
+   - Compact mode shows only essential information.
 
 **Keyboard Shortcuts:**
-- `Enter` - Calculate selected recipe
-- `q` - Quit application
-- `d` - Toggle dark/light mode
-- Arrow keys - Navigate recipe tree
-- Space - Expand/collapse tree nodes
+- `Enter` – Calculate selected recipe
+- `q` – Quit application
+- `d` – Toggle dark/light mode
+- Arrow keys – Navigate recipe tree
+- Space – Expand/collapse tree nodes
 
 ### CLI Mode (Legacy)
 
@@ -81,74 +78,73 @@ This mode reads settings directly from `data/Config.json` and outputs results to
 
 ### Config.json Settings
 
-- **`product`**: The item/recipe to calculate (e.g., `"electronic_circuit"`)
-- **`belt_color`**: Target belt color: `"yellow"`, `"red"`, `"blue"`, or `"green"`
-- **`verbose`**: Output format - `"true"` for detailed info, `"false"` for compact
-- **`consoleLogging`**: Whether to display log messages in console
-  - `"true"` - Shows INFO-level logs in console (startup info, configuration, completion messages)
-  - `"false"` - Only writes logs to file, console shows only the calculation result
-  - Note: All logs are always saved to `factorio_calculator.log` regardless of this setting
+- **`product`**: The item/recipe to calculate (e.g., `"electronic_circuit"`).
+- **`belt_color`**: Target belt color: `"yellow"`, `"red"`, `"blue"`, or `"green"`.
+- **`verbose`**: Output format – `"true"` for detailed info, `"false"` for compact.
+- **`consoleLogging`**: Whether to display log messages in the console.
+  - `"true"` – Shows INFO-level logs in the console (startup info, configuration, completion messages).
+  - `"false"` – Only writes logs to file; the console shows only the calculation result.
+  - Note: All logs are always saved to `factorio_calculator.log` regardless of this setting.
 
 ## Project Structure
 
 ### Root Directory
-- `Main.py` - Entry point launcher (calls src/Main.py)
-- `README.md` - This file
-- `testing.md` - Test protocol and cases
-- `requirements.txt` - Python dependencies
-- `documentation.md` - Development history and design decisions
-- `.env.example` / `.env` - Environment configuration
-- `factorio_calculator.log` - Application log file
+- `Main.py` – Entry point launcher (calls src/Main.py)
+- `README.md` – This file
+- `testing.md` – Test protocol and cases
+- `requirements.txt` – Python dependencies
+- `documentation.md` – Development history and design decisions
+- `.env.example` / `.env` – Environment configuration
+- `factorio_calculator.log` – Application log file
 
-### src/ - Python Source Code
-- `Main.py` - Application entry point for both wizard and CLI modes
-- `calculator.py` - Production chain calculation logic
-- `file_output.py` - ASCII tree file generation
-- `loader.py` - JSON data loading utilities
-- `logger_config.py` - Central logging setup
-- `models.py` - Data models for recipes, machines, and products
-- `settings.py` - Environment-based settings loader
-- `textual_wizzard.py` - Interactive wizard interface
-- `utils.py` - Shared utility functions
+### src/ – Python Source Code
+- `Main.py` – Application entry point for both wizard and CLI modes
+- `calculator.py` – Production chain calculation logic
+- `file_output.py` – ASCII tree file generation
+- `loader.py` – JSON data loading utilities
+- `logger_config.py` – Central logging setup
+- `models.py` – Data models for recipes, machines, and products
+- `settings.py` – Environment-based settings loader
+- `textual_wizzard.py` – Interactive wizard interface
+- `utils.py` – Shared utility functions
 
-### data/ - Configuration and Game Data
-- `base.json` - Game data (recipes, machines, belts)
-- `Config.json` - User configuration (CLI mode)
+### data/ – Configuration and Game Data
+- `base.json` – Game data (recipes, machines, belts)
+- `Config.json` – User configuration (CLI mode)
 
-### calculation trees/ - Output Folder
+### calculation trees/ – Output Folder
 - Generated calculation files with timestamped names
 - Format: `{recipe}_{belt}_belt_{mode}_{timestamp}.txt`
 
-
 ## Development History
 
-### Version 1.0 - CLI Calculator
-- Basic command-line calculator using `Config.json`
-- Machine selection and production rate calculations
-- Console output with tree-structured production plans
+### Version 1.0 – CLI Calculator
+- Basic command-line calculator using `Config.json`.
+- Machine selection and production rate calculations.
+- Console output with tree-structured production plans.
 
-### Version 1.5 - Recipe Category Refactoring
-- Separated machine selection (`preferred_machine`) from UI categorization (`category`)
-- Transformed `category` into hierarchical array for better UI organization
-- Maintained backward compatibility for legacy data structures
-- See [documentation.md](documentation.md) for detailed migration notes
+### Version 1.5 – Recipe Category Refactoring
+- Separated machine selection (`preferred_machine`) from UI categorization (`category`).
+- Transformed `category` into a hierarchical array for better UI organization.
+- Maintained backward compatibility for legacy data structures.
+- See [documentation.md](documentation.md) for detailed migration notes.
 
-### Version 2.0 - Interactive Wizard Interface
-- Added Textual-based TUI wizard for interactive recipe selection
-- Implemented tree-based recipe browser with category hierarchies
-- Made wizard mode the default, CLI mode available via `--cli` flag
-- Added file output for calculation trees
+### Version 2.0 – Interactive Wizard Interface
+- Added Textual-based TUI wizard for interactive recipe selection.
+- Implemented tree-based recipe browser with category hierarchies.
+- Made wizard mode the default; CLI mode available via `--cli` flag.
+- Added file output for calculation trees.
 
-### Version 2.1 - File structure & code quality improvements
-- better seperation of logic into packages and modules
-- added .env, requirements and settings.py for configuration
-- pydocstring improvements and code cleanup
-- logging improvements
-- add multiple test scenarios for valuation
+### Version 2.1 – File Structure & Code Quality Improvements
+- Better separation of logic into packages and modules.
+- Added .env, requirements, and settings.py for configuration.
+- Improved pydocstrings and code cleanup.
+- Logging improvements.
+- Added multiple test scenarios for validation.
 
 ## Example Output
 
-When you calculate "Electronic Circuit" with a Green Belt (60 items/s) in non verbose mode,
+When you calculate "Electronic Circuit" with a Green Belt (60 items/s) in non-verbose mode,
 a file is created in the `calculation trees` folder:
 
 ```
@@ -197,11 +193,15 @@ Mode:        Compact
 ```
 
 ## Future Improvements
-- Sort recipes alphabetically in the wizard tree
-- Add custom belt speeds support
-- Add belt balancer and ammount calculations
-- auto deleting of old calculation trees based on age or count
+- Sort recipes alphabetically in the wizard tree.
+- Add support for custom belt speeds.
+- Add belt balancer and amount calculations.
+- Automatically delete old calculation trees based on age or count.
 
 ## Development
 
-This project was developed as part of Module M122 Python Project at GIBZ.
+This project was developed as part of the Module M122 Python Project at GIBZ.
+
+## Weirdest Bug of My Life
+If `factorio_calculator.log` ever remains empty after running the program, this is due to VSCode forgetting its encoding for the file.
+If you open the file with Notepad, you will see all logs. In the bottom right, click on the encoding algorithm (e.g., UTF-8) and select "Reopen with Encoding." This fixes the bug.

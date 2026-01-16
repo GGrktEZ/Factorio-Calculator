@@ -1,6 +1,6 @@
 {
-   "belt_color": "yellow",
-   "product": "electronic_circuit",
-   "verbose": "false",
+   "belt_color": "pink",
+   "product": "electric_engine_unit",
+   "verbose": "true",
    "consoleLogging": "false"
 }

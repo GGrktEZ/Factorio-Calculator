@@ -24,9 +24,6 @@ env/
 # Environment
 .env
 
-# Logs
-*.log
-
 # Windows
 desktop.ini
 Thumbs.db

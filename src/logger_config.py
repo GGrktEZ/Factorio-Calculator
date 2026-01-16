@@ -85,6 +85,9 @@ class LoggerSetup:
         Returns:
             The FactorioCalculator logger.
         """
+        if cls._logger is None:
+            return cls.initialize()
+        return cls._logger
 
     @classmethod
     def get_log_file(cls) -> Optional[str]:

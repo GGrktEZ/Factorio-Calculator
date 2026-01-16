@@ -77,6 +77,18 @@ python main.py --cli
 
 This mode reads settings directly from `data/Config.json` and outputs results to the console.
 
+## Configuration
+
+### Config.json Settings
+
+- **`product`**: The item/recipe to calculate (e.g., `"electronic_circuit"`)
+- **`belt_color`**: Target belt color: `"yellow"`, `"red"`, `"blue"`, or `"green"`
+- **`verbose`**: Output format - `"true"` for detailed info, `"false"` for compact
+- **`consoleLogging`**: Whether to display log messages in console
+  - `"true"` - Shows INFO-level logs in console (startup info, configuration, completion messages)
+  - `"false"` - Only writes logs to file, console shows only the calculation result
+  - Note: All logs are always saved to `factorio_calculator.log` regardless of this setting
+
 ## Project Structure
 
 ### Root Directory

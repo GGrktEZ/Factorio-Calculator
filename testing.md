@@ -2,11 +2,6 @@
 
 ---
 
-## Scope
-5–10 tests covering CLI, wizard, output, and edge cases. Each test lists Config.json state (for CLI), steps, and exact pass/fail expectations.
-
----
-
 ## Test Cases
 
 ### 1 CLI - Happy Path (Green Belt, Verbose)

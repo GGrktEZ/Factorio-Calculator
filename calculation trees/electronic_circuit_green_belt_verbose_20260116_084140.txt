@@ -2,40 +2,40 @@
   FACTORIO PRODUCTION CALCULATOR
 ════════════════════════════════════════════════════════════════════════════════
 
-Recipe:      Advanced Circuit
+Recipe:      Electronic Circuit
 Belt:        Green Belt (60 items/s)
-Generated:   2026-01-09 11:58:24
-Mode:        Compact
+Generated:   2026-01-16 08:41:40
+Mode:        Verbose
 
 ════════════════════════════════════════════════════════════════════════════════
 
-└── [Product] Advanced Circuit
-    Machine: Electromagnetic Plant x120.00
-    Target:  60.00 items/s
-    
-    Ingredients:
-       ├── [Crafted] Copper Cable (240.00/s)
+└── [Product] Electronic Circuit
+    ┌─ Machine Configuration
+    │  Type:         Electromagnetic Plant
+    │  Speed:        2.0x
+    │  Productivity: 50%
+    │
+    ├─ Production Details
+    │  Target Rate:  60.00 items/s
+    │  Per Machine:  6.00 items/s
+    │  Machines:     10.00
+    │
+    └─ Required Ingredients (2)
+       ├── [Crafted] Copper Cable (180.00/s)
        │   ├── [Product] Copper Cable
-       │   │   Machine: Electromagnetic Plant x20.00
-       │   │   Target:  240.00 items/s
-       │   │   
-       │   │   Ingredients:
-       │   │      └── [Raw] Copper Plate (120.00/s)
-       ├── [Crafted] Electronic Circuit (120.00/s)
-       │   ├── [Product] Electronic Circuit
-       │   │   Machine: Electromagnetic Plant x20.00
-       │   │   Target:  120.00 items/s
-       │   │   
-       │   │   Ingredients:
-       │   │      ├── [Crafted] Copper Cable (360.00/s)
-       │   │      │   ├── [Product] Copper Cable
-       │   │      │   │   Machine: Electromagnetic Plant x30.00
-       │   │      │   │   Target:  360.00 items/s
-       │   │      │   │   
-       │   │      │   │   Ingredients:
-       │   │      │   │      └── [Raw] Copper Plate (180.00/s)
-       │   │      └── [Raw] Iron Plate (120.00/s)
-       └── [Raw] Plastic Bar (120.00/s)
+       │   │   ┌─ Machine Configuration
+       │   │   │  Type:         Electromagnetic Plant
+       │   │   │  Speed:        2.0x
+       │   │   │  Productivity: 50%
+       │   │   │
+       │   │   ├─ Production Details
+       │   │   │  Target Rate:  180.00 items/s
+       │   │   │  Per Machine:  12.00 items/s
+       │   │   │  Machines:     15.00
+       │   │   │
+       │   │   └─ Required Ingredients (1)
+       │   │      └── [Raw] Copper Plate (90.00/s)
+       └── [Raw] Iron Plate (60.00/s)
 
 ════════════════════════════════════════════════════════════════════════════════
   End of calculation

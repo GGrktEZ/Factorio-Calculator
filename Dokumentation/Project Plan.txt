@@ -1,0 +1,141 @@
+ ┌──────────────────────────────────┐
+ │                Requirements                │
+ │--------------------------------------------│
+ │ • Define automation goal: Factorio ratio   │
+ │   calculator (belts → machines).           │
+ │ • Identify inputs (target item, belt type, │
+ │   modules).                                │
+ │ • Define outputs (machine counts, belts,   │
+ │   surplus %, dependency tree).             │
+ │ • Constraints: ignore fluids, no beacons.  │
+ │ • Collect Factorio recipe data.            │
+ └──────────────────────────────────┘
+                     │
+                     ▼
+ ┌──────────────────────────────────┐
+ │             System & Design                │
+ │--------------------------------------------│
+ │ • Create JSON data structure for recipes,  │
+ │   machines, modules, and belts.            │
+ │ • Plan core logic: recursive dependency    │
+ │   calculation down to base materials.      │
+ │ • Plan CLI structure and future API layer. │
+ │ • Design UI flow (inputs → calculate →     │
+ │   results tree with icons).                │
+ └──────────────────────────────────┘
+                     │
+                     ▼
+ ┌──────────────────────────────────┐
+ │               Implementation               │
+ │--------------------------------------------│
+ │ • Implement JSON loader & validator.       │
+ │ • Implement core calculation engine        │
+ │   (Python) – no fluids, rounding up.       │
+ │ • Develop CLI to test logic.               │
+ │ • Build API (FastAPI) for UI connection.   │
+ │ • Generate or download item icons.         │
+ └──────────────────────────────────┘
+                     │
+                     ▼
+ ┌──────────────────────────────────┐
+ │                  Testing                   │
+ │--------------------------------------------│
+ │ • Verify calculations with known ratios.   │
+ │ • Unit test recursive dependencies.        │
+ │ • Check JSON data parsing and integrity.   │
+ │ • Validate performance on large chains     │
+ │   (e.g. space science packs).              │
+ └──────────────────────────────────┘
+                     │
+                     ▼
+ ┌──────────────────────────────────┐
+ │              Deployment & UI               │
+ │--------------------------------------------│
+ │ • Integrate backend with v0/React frontend │
+ │ • Add dropdowns, input fields, and icons.  │
+ │ • Build modern dark-mode interface.        │
+ │ • Export results (JSON/CSV).               │
+ │ • Package into standalone app or web tool. │
+ └──────────────────────────────────┘
+                     │
+                     ▼
+ ┌──────────────────────────────────┐
+ │              Maintenance & QA              │
+ │--------------------------------------------│
+ │ • Update recipes for future versions.      │
+ │ • Add beacons/power/fluids later.          │
+ │ • Improve rounding, error handling.        │
+ │ • Collect feedback and optimize UX.        │
+ └──────────────────────────────────┘
+
+
+
+
+
+_______________________________________________________________________________________________________________________________________
+
+Requirements
+
+Define automation goal: Factorio ratio calculator (belts → machines).
+
+Identify inputs (target item, belt type, modules).
+
+Define outputs (machine counts, belts, surplus %, dependency tree).
+
+Constraints: ignore fluids, no beacons.
+
+Collect Factorio recipe data.
+
+System & Design
+
+Create JSON data structure for recipes, machines, modules, and belts.
+
+Plan core logic: recursive dependency calculation down to base materials.
+
+Plan CLI structure and future API layer.
+
+Design UI flow (inputs → calculate → results tree with icons).
+
+Implementation
+
+Implement JSON loader & validator.
+
+Implement core calculation engine (Python) – no fluids, rounding up.
+
+Develop CLI to test logic.
+
+Build API (FastAPI) for UI connection.
+
+Generate or download item icons.
+
+Testing
+
+Verify calculations with known ratios.
+
+Unit test recursive dependencies.
+
+Check JSON data parsing and integrity.
+
+Validate performance on large chains (e.g. space science packs).
+
+Deployment & UI
+
+Integrate backend with v0/React frontend.
+
+Add dropdowns, input fields, and icons.
+
+Build modern dark-mode interface.
+
+Export results (JSON/CSV).
+
+Package into standalone app or web tool.
+
+Maintenance & QA
+
+Update recipes for future versions.
+
+Add beacons/power/fluids later.
+
+Improve rounding, error handling.
+
+Collect feedback and optimize UX.

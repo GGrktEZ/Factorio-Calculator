@@ -16,10 +16,31 @@ class RecipeCalculator:
         logger.debug("RecipeCalculator initialized")
 
     def get_recipe(self, recipe_name: str) -> Optional[Recipe]:
-        """Get a recipe by name."""
+        """Retrieve a recipe by name.
+        
+        Args:
+            recipe_name: The name of the recipe to retrieve.
+            
+        Returns:
+            Recipe object if found, None otherwise.
+        """
         return self.data.recipes.get(recipe_name)
 
     def select_best_machine(self, recipe_category: str) -> str:
+        """Select the best machine for a given recipe category.
+        
+        Selects the machine with the highest base productivity that supports
+        the recipe category. Falls back to first available machine if no match found.
+        
+        Args:
+            recipe_category: The recipe category (e.g., 'crafting', 'smelting').
+            
+        Returns:
+            The name of the best machine for this category.
+            
+        Logs:
+            Debug: Machine selection and fallback decisions.
+        """
         logger.debug(f"Selecting best machine for category: {recipe_category}")
         machines = self.data.machines
         best_machine = None
@@ -31,12 +52,10 @@ class RecipeCalculator:
                     best_machine = machine_name
                     best_productivity = machine.base_productivity
 
-        # Fallback to assembling_machine if available
         if best_machine is None:
             if 'assembling_machine' in machines:
                 logger.debug(f"No machine found for category '{recipe_category}', "
                             "using fallback: assembling_machine")
-            # Fallback to first machine
             fallback = list(machines.keys())[0]
             logger.debug(f"No machine found for category '{recipe_category}', "
                         f"using fallback: {fallback}")
@@ -51,6 +70,24 @@ class RecipeCalculator:
         target_rate: float,
         depth: int = 0
     ) -> MachinePlan:
+        """Calculate the machine plan for a recipe at a target production rate.
+        
+        Recursively calculates production requirements including the optimal machine,
+        quantity needed, and ingredient requirements. Handles ingredient recipes
+        by recursively planning their production.
+        
+        Args:
+            recipe_name: The name of the recipe to calculate.
+            target_rate: Target production rate in items/second.
+            depth: Current recursion depth (internal use for logging indentation).
+            
+        Returns:
+            MachinePlan object containing all calculation details and ingredient plans.
+            
+        Logs:
+            Debug: Detailed calculation steps and ingredient processing.
+            Warning: Missing recipes.
+        """
         indent = "  " * depth
         logger.debug(f"{indent}Calculating plan for recipe: {recipe_name} "
                      f"at rate: {target_rate:.2f} items/s")

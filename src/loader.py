@@ -22,6 +22,25 @@ class DataLoader:
         logger.debug(f"DataLoader initialized with directory: {directory}")
 
     def load_file(self, filename: str) -> Dict[str, Any]:
+        """Load and parse a JSON file.
+        
+        Supports both relative paths (joined with directory) and absolute paths.
+        
+        Args:
+            filename: The filename or path to load (relative or absolute).
+            
+        Returns:
+            Dictionary containing the parsed JSON data.
+            
+        Raises:
+            FileNotFoundError: If the file doesn't exist.
+            json.JSONDecodeError: If the file contains invalid JSON.
+            
+        Logs:
+            Debug: File path being loaded.
+            Info: Successful load completion.
+            Error: File not found or JSON parsing errors.
+        """
         # If filename is an absolute path, use it directly; otherwise join with directory
         if os.path.isabs(filename):
             file_path = filename
@@ -45,11 +64,17 @@ class DataLoader:
             )
 
     def load_base_data(self) -> FactorioData:
-        """
-        Load the base game data from base.json.
+        """Load the base game data from base.json.
+        
+        Loads all game data including recipes, machines, modules, and belt speeds.
+        Parses the JSON data into a FactorioData object with all data structures.
 
         Returns:
-            FactorioData object containing all game data
+            FactorioData object containing all game data.
+            
+        Logs:
+            Info: Number of loaded recipes, machines, and modules.
+            Debug: Additional parsing details.
         """
         logger.info("Loading base game data")
         raw_data = self.load_file(settings.BASE_JSON)
@@ -60,7 +85,15 @@ class DataLoader:
         return factorio_data
 
     def load_config(self) -> Dict[str, Any]:
-        logger.info("Loading user configuration")
+        """Load user configuration from Config.json.
+        
+        Returns:
+            Dictionary containing configuration settings (belt_color, product, verbose, etc).
+            
+        Logs:
+            Info: Configuration loaded.
+            Debug: Specific configuration values.
+        """
         config = self.load_file(settings.CONFIG_JSON)
         logger.debug(f"Configuration loaded: belt_color={config.get('belt_color')}, "
                      f"product={config.get('product')}, "
@@ -70,5 +103,11 @@ class DataLoader:
 
     @staticmethod
     def get_current_directory() -> str:
-        # Always resolve to project root so data files live at repository root
-        return str(settings.ROOT_DIR)
+        """Get the project root directory.
+        
+        Always resolves to the project root so data files are located at the
+        repository root regardless of execution context.
+        
+        Returns:
+            The absolute path to the project root directory.
+        """

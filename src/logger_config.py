@@ -18,11 +18,26 @@ class LoggerSetup:
 
     @classmethod
     def initialize(cls, log_dir: Optional[str] = None, enable_console: Optional[bool] = None) -> logging.Logger:
+        """Initialize the logger with file and optional console output.
+        
+        Sets up a logger that writes to factorio_calculator.log in the project root
+        and optionally to console. Ignored external log_dir to prevent output 
+        directory pollution. Should only be called once.
+        
+        Args:
+            log_dir: Deprecated. Log file always written to project root.
+            enable_console: Whether to enable console output. If None, uses settings.LOG_CONSOLE.
+            
+        Returns:
+            Configured logging.Logger instance.
+            
+        Logs:
+            Info: Logger initialization completion and console status.
+            Debug: Log file path.
+        """
         if cls._logger is not None:
             return cls._logger
 
-        # Always write logs to project root (./factorio_calculator.log)
-        # Ignore any external log_dir that may point to the calculation output folder
         log_directory = str(settings.ROOT_DIR)
         os.makedirs(log_directory, exist_ok=True)
 
@@ -63,10 +78,19 @@ class LoggerSetup:
 
     @classmethod
     def get_logger(cls) -> logging.Logger:
-        if cls._logger is None:
-            return cls.initialize()
-        return cls._logger
+        """Get the configured logger instance.
+        
+        Returns the logger, initializing it if not yet initialized.
+        
+        Returns:
+            The FactorioCalculator logger.
+        """
 
     @classmethod
     def get_log_file(cls) -> Optional[str]:
+        """Get the path to the log file.
+        
+        Returns:
+            The absolute path to factorio_calculator.log, or None if not initialized.
+        """
         return cls._log_file

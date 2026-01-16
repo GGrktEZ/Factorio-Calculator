@@ -16,7 +16,17 @@ import settings
 
 
 def run_cli_mode():
-    """Run calculator in CLI mode using Config.json."""
+    """Run calculator in CLI mode using Config.json.
+    
+    Loads configuration from Config.json, performs calculation, displays results
+    to console, and saves output to file. Falls back to sensible defaults if
+    config file is missing.
+    
+    Logs:
+        Info: Startup, configuration, and completion.
+        Warning: Missing recipes or belt colors.
+        Error: File or configuration errors.
+    """
     current_dir = DataLoader.get_current_directory()
     console_logging_enabled = settings.LOG_CONSOLE
 
@@ -95,7 +105,15 @@ def run_cli_mode():
 
 
 def run_wizard_mode():
-    """Run calculator in interactive wizard mode."""
+    """Run calculator in interactive wizard mode.
+    
+    Launches the Textual-based TUI wizard for interactive recipe selection and
+    configuration. Provides a tree-based recipe browser with belt and verbose options.
+    
+    Logs:
+        Info: Startup, wizard completion.
+        Error: Wizard execution errors.
+    """
     current_dir = DataLoader.get_current_directory()
     
     try:
@@ -128,7 +146,11 @@ def run_wizard_mode():
 
 
 def main():
-    """Main entry point for the Factorio Calculator."""
+    """Main entry point for the Factorio Calculator.
+    
+    Routes to CLI mode (with --cli flag) or wizard mode (default).
+    Ensures proper error handling and logging initialization for both modes.
+    """
     if len(sys.argv) > 1 and sys.argv[1] == '--cli':
         run_cli_mode()
     else:

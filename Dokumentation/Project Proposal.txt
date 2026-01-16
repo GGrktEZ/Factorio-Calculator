@@ -1,0 +1,46 @@
+# Project Proposal — Factorio Ratio Calculator (24.10.2025)
+
+## 1) High-level description (what I want to automate)
+
+Automate the calculation of **production ratios** in Factorio (vanilla + Space Age).
+Given a target like “2 red belts of Advanced Circuits,” the tool computes—automatically and reproducibly—the exact **machines**, **modules**, and **belt counts** for every intermediate down to base materials, using the real game recipes and craft times. The app also explains “how many machines a single input belt can feed,” rounding **up** to practical whole numbers and showing surplus %.
+
+## 2) High-level steps (how I’ll automate it)
+
+1. **Define data model** (JSON): belts, machines, modules, and recipes (incl. Space Age intermediates).
+2. **Parser/loader**: load and validate JSON (catch typos, missing products, etc.).
+3. **Core solver (Python)**:
+
+   * Convert belts → items/s.
+   * Traverse dependency graph (target → ingredients).
+   * Compute per-machine rates (crafting speed, module effects), **ignore fluids** by design (treated as infinite).
+   * Round machines up; derive belt counts and “machines per belt;” compute surplus %.
+4. **Frontend UI**: dropdowns for inputs, “Calculate” button, results tree with icons and exports (JSON/CSV).
+
+## 3) Systems involved
+
+* **Filesystem / Data**: `base.json` for recipes & entities.
+* **Backend**: Python 3, solver.
+* **Frontend**: React/Next, icon pack from Factorio Wiki.
+* **(Later features)**: CSV export, profiles, power calculation, beacons, fluids modeling.
+
+## 4) Estimated benefits of automating
+
+* **Hours saved**: 5–15 minutes per design iteration → for 50 iterations ≈ **4–12 hours** saved per project.
+* **Quality of life**: consistent math (no spreadsheet drift), instant “what-if” changes (belt type, modules).
+* **Reduced mistakes**: exact rounding and dependency expansion prevent under-/over-building.
+* **Reusability**: one tool for any target item (scales to Space Age) instead of bespoke spreadsheets.
+
+## 5) Scope & assumptions (MVP)
+
+* In scope: belts, assemblers, modules (global), rounding up, surplus %, items-only inputs (fluids ignored), Space Age intermediates.
+* Out of scope (for now): beacons, inserter throughput limits, power/pollution, oil cracking logic, barrels.
+
+
+## 6) Success criteria
+
+* Enter a target (e.g., “1 blue belt of Advanced Circuits”) and receive a **complete breakdown** (machines, belts, per-ingredient rates, surplus %) for all craftable intermediates.
+* Results are deterministic and match reference calculations within rounding rules (≥ target throughput).
+* Usable UI with clear inputs, one-click calculate, and readable results.
+
+---

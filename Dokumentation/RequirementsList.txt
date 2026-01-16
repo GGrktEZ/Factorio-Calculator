@@ -1,0 +1,163 @@
+===============================================================================
+FACTORIO CALCULATOR - REQUIREMENTS LIST
+===============================================================================
+
+===============================================================================
+FUNCTIONAL REQUIREMENTS
+===============================================================================
+
+[MUST-HAVE]
+
+FR-1.1   Load Game Data
+         The application must be able to load Factorio game data (recipes, 
+         machines, items, belt speeds) from base.json file.
+
+FR-1.2   Calculate Production Plans
+         The application must calculate the number of machines and production 
+         rates required to produce a specified item at a target output rate.
+
+FR-1.3   Recipe Processing
+         The application must recursively process recipes to calculate 
+         requirements for all intermediate components.
+
+FR-1.4   User Configuration
+         The application must load user configuration (product name, belt color, 
+         output mode) from Config.json file.
+
+FR-1.5   Output Results
+         The application must display calculated production plans with clear 
+         machine counts, production rates, and resource requirements.
+
+FR-1.6   File Output
+         The application must save calculation results to text files in the 
+         "calculation trees" directory.
+
+
+[SHOULD-HAVE]
+
+FR-2.1   Interactive UI
+         The application should provide an interactive textual user interface 
+         (wizard) for recipe selection and configuration instead of requiring 
+         manual Config.json edits.
+
+FR-2.2   Multiple Output Formats
+         The application should support both verbose and compact output formats 
+         for calculation results.
+
+FR-2.3   Console Logging
+         The application should provide optional console logging output for 
+         debugging purposes.
+
+FR-2.4   Verbose Mode
+         The application should support detailed step-by-step breakdown of 
+         calculations in verbose mode.
+
+
+[COULD-HAVE]
+
+FR-3.1   Recipe Search
+         The application could implement a search function to find recipes by 
+         item name or keyword within the wizard interface.
+
+FR-3.2   Export to HTML
+         The application could support exporting calculation results to HTML 
+         format for better formatting and sharing.
+
+FR-3.3   Save User Preferences
+         The application could remember users last selected product and belt 
+         color for faster subsequent use.
+
+FR-3.4   Batch Processing
+         The application could process multiple items in a single execution 
+         and generate reports for all.
+
+
+
+[WILL-NOT-HAVE]
+
+FR-4.1   Real-time Factorio Integration
+         The application will not directly connect to or modify active Factorio 
+         game instances.
+
+FR-4.2   Network Multiplayer
+         The application will not support multiplayer or network synchronization 
+         features.
+
+FR-4.3   Create Diagram
+         The application will not support creating Diagrams of the  
+         Machines and how to place them in game 
+
+
+===============================================================================
+NON-FUNCTIONAL REQUIREMENTS
+===============================================================================
+
+[MUST-HAVE]
+
+NFR-1.1  Performance
+         Calculation results must be returned within 3 seconds for any valid 
+         recipe request.
+
+NFR-1.2  Data Integrity
+         The application must validate JSON data files and reject malformed 
+         or incomplete data with clear error messages.
+
+NFR-1.3  Logging
+         The application must maintain a log file (factorio_calculator.log) 
+         with all significant operations and errors.
+
+NFR-1.4  Error Handling
+         The application must handle missing files, invalid JSON, and invalid 
+         recipe names gracefully with informative error messages.
+
+NFR-1.5  Python Version Support
+         The application must run on Python 3.8 or higher.
+
+
+[SHOULD-HAVE]
+
+NFR-2.1  Code Documentation
+         The application code should be well-documented with docstrings and 
+         comments explaining key logic.
+
+NFR-2.2  Modularity
+         The application should be organized into logical modules with clear 
+         separation of concerns (loader, calculator, UI, output).
+
+NFR-2.3  Configuration Flexibility
+         The application should support environment variables for customizing 
+         file paths and logging behavior.
+
+NFR-2.4  Usability
+         The UI should be intuitive with clear instructions and reasonable 
+         default values.
+
+
+[COULD-HAVE]
+
+NFR-3.1  Memory Efficiency
+         The application could optimize memory usage for very large calculation 
+         trees with hundreds of items.
+
+NFR-3.2  Cross-Platform Compatibility
+         The application could be tested and optimized for Windows, Linux, and 
+         macOS platforms.
+
+NFR-3.3  Unit Test Coverage
+         The application could have unit test coverage of at least 70% for 
+         core calculation logic.
+
+NFR-3.4  Type Hints
+         The application code could include comprehensive type hints for better 
+         IDE support and type checking.
+
+
+[WILL-NOT-HAVE]
+
+NFR-4.1  Database Requirements
+         The application will not require any external database or server 
+         components.
+
+NFR-4.2  GUI Framework
+         The application will not use heavyweight GUI frameworks like PyQt or 
+         Tkinter (stays with TUI).

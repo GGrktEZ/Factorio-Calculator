@@ -1,0 +1,64 @@
+@startuml
+title Factorio Calculator - Deployment Diagram
+
+skinparam linetype ortho
+skinparam shadowing false
+skinparam componentStyle rectangle
+skinparam nodesep 40
+skinparam ranksep 35
+
+top to bottom direction
+
+node "Developer Machine" as dev {
+
+  rectangle "Python Application" as app {
+    component "Main.py" as main
+    component "Calculator Engine" as calc
+    component "UI (CLI/Wizard)" as ui
+
+    main -[hidden]down- calc
+    main -[hidden]down- ui
+    calc -[hidden]right- ui
+
+    main -down-> calc
+    main -down-> ui
+  }
+
+  ' container box for the filesystem area
+  node " " as fs {
+
+    ' left-positioned title (so it won't clash with arrows)
+    rectangle "<b>Local Filesystem</b>" as fsTitle
+    fsTitle -[hidden]down- data_folder
+
+    folder "data/" as data_folder {
+      file "base.json" as base_json
+      file "Config.json" as config_json
+      base_json -[hidden]right- config_json
+    }
+
+    folder "calculation trees/" as calc_trees {
+      file "*.txt (output)" as output_txt
+    }
+
+    file "factorio_calculator.log" as log_file
+
+    together {
+      data_folder -[hidden]right- calc_trees
+      calc_trees  -[hidden]right- log_file
+    }
+  }
+
+  calc -down-> data_folder
+  calc -down-> calc_trees
+  ui   -down-> calc_trees
+  main ..down..> log_file
+}
+
+note right of dev
+  No external services required.
+  All processing local.
+  No database, API, or network calls.
+end note
+
+@enduml

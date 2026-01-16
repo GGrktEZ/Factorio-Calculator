@@ -18,9 +18,16 @@ except Exception:
 # Project root directory (parent of src folder)
 ROOT_DIR: Path = Path(__file__).resolve().parent.parent
 
+# Data folder path
+DATA_DIR: Path = ROOT_DIR / "data"
+
 # Data files (loaded from data/ folder)
-BASE_JSON: str = os.getenv("BASE_JSON", str(ROOT_DIR / "data" / "base.json"))
-CONFIG_JSON: str = os.getenv("CONFIG_JSON", str(ROOT_DIR / "data" / "Config.json"))
+_base_json_env = os.getenv("BASE_JSON", "base.json")
+_config_json_env = os.getenv("CONFIG_JSON", "Config.json")
+
+# If env vars are absolute paths, use them; otherwise join with DATA_DIR
+BASE_JSON: str = _base_json_env if os.path.isabs(_base_json_env) else str(DATA_DIR / _base_json_env)
+CONFIG_JSON: str = _config_json_env if os.path.isabs(_config_json_env) else str(DATA_DIR / _config_json_env)
 
 # Logging configuration
 LOG_DIR: str = os.getenv("LOG_DIR", str(ROOT_DIR))

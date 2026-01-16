@@ -1,6 +1,6 @@
 {
-   "belt_color": "green",
+   "belt_color": "yellow",
    "product": "electronic_circuit",
-   "verbose": "true",
+   "verbose": "false",
    "consoleLogging": "false"
 }

@@ -1,0 +1,35 @@
+2026-01-16 19:42:14 - FactorioCalculator - INFO - Logger initialized successfully
+2026-01-16 19:42:14 - FactorioCalculator - DEBUG - Log file: C:\Users\David\Desktop\New folder\Factorio-Calculator\factorio_calculator.log
+2026-01-16 19:42:14 - FactorioCalculator - INFO - ============================================================
+2026-01-16 19:42:14 - FactorioCalculator - INFO - Factorio Calculator starting (Wizard mode)
+2026-01-16 19:42:14 - FactorioCalculator - INFO - ============================================================
+2026-01-16 19:42:15 - FactorioCalculator - DEBUG - TextualWizard initialized
+2026-01-16 19:42:15 - FactorioCalculator - INFO - Loading wizard interface
+2026-01-16 19:42:15 - FactorioCalculator - DEBUG - DataLoader initialized with directory: None
+2026-01-16 19:42:15 - FactorioCalculator - INFO - Loading base game data
+2026-01-16 19:42:15 - FactorioCalculator - DEBUG - Loading JSON file: C:\Users\David\Desktop\New folder\Factorio-Calculator\data\base.json
+2026-01-16 19:42:15 - FactorioCalculator - INFO - Successfully loaded base.json
+2026-01-16 19:42:15 - FactorioCalculator - INFO - Loaded 29 recipes, 3 machines, 6 modules
+2026-01-16 19:42:15 - FactorioCalculator - DEBUG - Populated tree with 29 recipes
+2026-01-16 19:42:15 - FactorioCalculator - INFO - Wizard interface loaded successfully
+2026-01-16 19:42:15 - FactorioCalculator - DEBUG - Belt color changed to: green
+2026-01-16 19:42:18 - FactorioCalculator - DEBUG - Recipe selected: advanced_circuit
+2026-01-16 19:42:20 - FactorioCalculator - INFO - Starting calculation for advanced_circuit
+2026-01-16 19:42:20 - FactorioCalculator - DEBUG - RecipeCalculator initialized
+2026-01-16 19:42:20 - FactorioCalculator - DEBUG - Calculating plan for recipe: advanced_circuit at rate: 60.00 items/s
+2026-01-16 19:42:20 - FactorioCalculator - DEBUG - Selecting best machine for category: electromagnetics
+2026-01-16 19:42:20 - FactorioCalculator - DEBUG - Selected machine: electromagnetic_plant (productivity: 0.5)
+2026-01-16 19:42:20 - FactorioCalculator - DEBUG -   Calculating plan for recipe: copper_cable at rate: 240.00 items/s
+2026-01-16 19:42:20 - FactorioCalculator - DEBUG - Selecting best machine for category: electromagnetics
+2026-01-16 19:42:20 - FactorioCalculator - DEBUG - Selected machine: electromagnetic_plant (productivity: 0.5)
+2026-01-16 19:42:20 - FactorioCalculator - DEBUG -   Calculating plan for recipe: electronic_circuit at rate: 120.00 items/s
+2026-01-16 19:42:20 - FactorioCalculator - DEBUG - Selecting best machine for category: electromagnetics
+2026-01-16 19:42:20 - FactorioCalculator - DEBUG - Selected machine: electromagnetic_plant (productivity: 0.5)
+2026-01-16 19:42:20 - FactorioCalculator - DEBUG -     Calculating plan for recipe: copper_cable at rate: 360.00 items/s
+2026-01-16 19:42:20 - FactorioCalculator - DEBUG - Selecting best machine for category: electromagnetics
+2026-01-16 19:42:20 - FactorioCalculator - DEBUG - Selected machine: electromagnetic_plant (productivity: 0.5)
+2026-01-16 19:42:20 - FactorioCalculator - INFO - Saving calculation to: C:\Users\David\Desktop\New folder\Factorio-Calculator\calculation trees\advanced_circuit_green_belt_compact_20260116_194220.txt
+2026-01-16 19:42:20 - FactorioCalculator - INFO - Calculation saved successfully to: advanced_circuit_green_belt_compact_20260116_194220.txt
+2026-01-16 19:42:20 - FactorioCalculator - INFO - Calculation completed and saved to file
+2026-01-16 19:42:20 - FactorioCalculator - INFO - Wizard mode completed
+2026-01-16 19:42:20 - FactorioCalculator - INFO - ============================================================
